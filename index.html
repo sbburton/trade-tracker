@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/tradetrackersheet.css">
     <script src="scripts/jquery/jquery-3.3.1.js"></script>
-  
+
   <style>
   </style>
 
     <title>Trade Tracker</title>
   </head>
   <body>
-  
-   <div id="searchBox"> 
-     <h1 style="color: black">Trade Tracker</h1>
-      <input placeholder= "Search..." type="text" id="sBox" >
-      <button id="search"><img src="images/search.png"></button>
+
+    <!--user input form-->
+    <!--https://getbootstrap.com/docs/4.0/components/forms/-->
+      <!--styling info above-->
+
+    <div class="form-group" id="inputform">
+
+      <h2>Add Item:</h2>
+      <form id="addItem">
+        <label for="symbol">Symbol</label>
+        <input type="text" class="form-inline" name="symbol"/> <!-- form-group -->
+
+        <label for="company">Company</label>
+        <input type="text" class="form-control" name="company" id="company"/>
+
+        <label for="price">Price</label>
+        <input type="text" class="form-control" name="price" id="price"/>
+
+        <label for="clientName">Client Name</label>
+        <input type="text" class="form-control" name="clientName" id="clientName"/>
+
+        <label for="date">Date</label>
+        <input type="date" class="form-control" name="date" id="date"/>
+
+
+        <label for="broker">Broker</label>
+        <select class="form-control" name="broker" id="broker">
+          <option value="reese" selected>Reese</option>
+          <option value="arnell" selected>Arnell</option>
+        </select>
+
+
+        <label for="status">Status</label>
+        <select class="form-control" name="status" id="status">
+          <option value="purchased" selected>Purchased</option>
+          <option value="watched">Watched</option>
+          <option value="sold">Sold</option>
+        </select>
+
+
+
+        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+      </form>
+
     </div>
-<div class="container">
-</div>
+
+
+
+
+   <!--<div id="searchBox">-->
+   <!--  <h1 style="color: black">Trade Tracker</h1>-->
+   <!--   <input placeholder= "Search..." type="text" id="sBox" >-->
+   <!--   <button id="search"><img src="images/search.png"></button>-->
+   <!-- </div>-->
+  <div class="container">
+  </div>
    <script src="scripts/tradetracker.js"></script>
   </body>
-  
+
 </html>

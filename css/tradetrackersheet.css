@@ -1,55 +1,76 @@
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px; 
-}
- #searchBox {
-  display: block;
-  background-color: grey;
-  color:#394569;
-  border-color: black;
+/*body {*/
+/*  font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+/*  font-size: 16px;*/
+/*}*/
+/* #searchBox {*/
+/*  display: block;*/
+/*  background-color: grey;*/
+/*  color:#394569;*/
+/*  border-color: black;*/
+/*}*/
+
+/*div {*/
+/*  text-align: center;*/
+/*}*/
+/*input  {*/
+/*  background-color: lightgrey;*/
+/*  border-radius: 10px;*/
+/*  color:#394569;*/
+/*  display: inline-block;*/
+/*  height: 25px;*/
+/*  -webkit-border-radius: 25px;*/
+/*  -moz-border-radius: 25px;*/
+/*  border-radius: 25px;*/
+/*  border: 0;*/
+/*  width: 50%;*/
+/*  padding: 5px;*/
+/*}*/
+
+
+
+/*button {*/
+/*  border-radius: 25px;*/
+/*}*/
+/*li {*/
+
+/*  list-style-type: none;*/
+/*  width: 50%;*/
+/*  padding: 10px;*/
+/*  background-color: grey;*/
+/*  color: black;*/
+/*  margin: auto;*/
+/*  margin-top: 10px;*/
+/*  border-radius: 15px;*/
+/*}*/
+/*a {*/
+/*  text-align: center;*/
+/*  text-decoration: none;*/
+/*  color: black;*/
+
+/*}*/
+
+/*a:hover {*/
+/*  text-decoration: none;*/
+/*  color: white;*/
+/*}*/
+
+#addItem {
+  width: 80%;
+  padding: 30px;
 }
 
-div {
-  text-align: center;
-}
-input  {
-  background-color: lightgrey;
-  border-radius: 10px;  
-  color:#394569;
-  display: inline-block;
-  height: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-  border: 0;
-  width: 50%;
-  padding: 5px;
+#inputform {
+  padding: 30px;
 }
 
-
-
-button { 
-  border-radius: 25px;
-}
-li {
- 
-  list-style-type: none;
-  width: 50%;
-  padding: 10px;
-  background-color: grey;
-  color: black;
-  margin: auto;
-  margin-top: 10px;
-  border-radius: 15px;
-}
-a {
-  text-align: center;
-  text-decoration: none;
-  color: black;
-
+.btn-primary {
+  margin: 20px;
 }
 
-a:hover {
-  text-decoration: none;
-  color: white;
+input {
+  margin-bottom: 30px;
+}
+
+select {
+  margin-bottom: 30px;
 }
