@@ -4,6 +4,7 @@ var stocks = {};
 
 //functions to run when DOM is ready
 $(document).ready(function(){
+  
 
     $("#submit").click(function(e){
         e.preventDefault()//prevent page refresh

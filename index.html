@@ -19,25 +19,26 @@
     <!--https://getbootstrap.com/docs/4.0/components/forms/-->
       <!--styling info above-->
 
-    <div class="form-group container-fluid" id="inputform">
+    <div class="form-group container-fluid nav-bar" id="inputform">
 
       <h2>Add Item:</h2>
+      <p>Broker</p>
+      <p>Status:</p>
       <form id="addItem">
-        <label for="symbol">Symbol</label>
-     <!--   <input type="text" class="form-inline" name="symbol" id="symbol"/>  form-group -->
-        <input type="text"  name="symbol" id="symbol"/> <!-- form-group -->
+    
+        <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
 
-        <label for="company">Company</label>
-        <input type="text" name="company" id="company"/>
+    <!--    <label for="company">Company</label> -->
+        <input placeholder= "Company" type="text" name="company" id="company"/>
 
-        <label for="price">Price</label>
-        <input type="text" name="price" id="price"/>
+    <!--    <label for="price">Price</label> -->
+        <input placeholder="Price" type="text" name="price" id="price"/>
 
-        <label for="clientName">Client Name</label>
-        <input type="text"  name="clientName" id="clientName"/>
+     <!--   <label for="clientName">Client Name</label> -->
+        <input placeholder= "Client" type="text"  name="clientName" id="clientName"/>
 
-        <label for="date">Date</label>
-        <input type="date"  name="date" id="date"/>
+     <!--   <label for="date">Date</label> -->
+        <input  type="date"  name="date" id="date" value="javascript:document.write(Date()+'.')"/>
 
 
         <label for="broker">Broker</label>

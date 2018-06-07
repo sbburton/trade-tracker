@@ -2,12 +2,12 @@
 div {
 /*  text-align: center; */
 }
- #addItem {
+/* #addItem {
    width: 50%; 
-   padding: 10px;
- } 
-
-/* #inputform {
+   padding: 20px;
+ }  
+*/
+#inputform {
    padding: 30px;
  } 
 
@@ -15,7 +15,7 @@ div {
    margin: 20px;
  }
  
- input {
+/* input {
     margin-bottom: 30px;
  }
 
