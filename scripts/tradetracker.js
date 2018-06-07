@@ -7,14 +7,14 @@ $(document).ready(function(){
 
     $("#submit").click(function(e){
         e.preventDefault()//prevent page refresh
-        
+
         console.log("clicked"); //test
-        
+
         //get value from form and transfer into a new stock object
         getFormValue(stockPropertyIdArray);
         console.log(stocks); //test
     })
-    
+
 });
 
 //Create stock object prototype
@@ -33,32 +33,32 @@ function setStockProperty(sym,propertyName,propertyValue) {
     stocks[sym][propertyName] = propertyValue;
 }
 
-//Function to get value from form input and set as stock obj property 
+//Function to get value from form input and set as stock obj property
 function getFormValue (idArray){
-    
+
     //create a new stock object inside the stocks object as a property
     var sym = $("#symbol").val();
     stocks[sym] = new stockObj;
-    
+
     //cycle through all input ids
     for (i=0;i<idArray.length;i++){
-        
+
         //get value from each input field
         var formValue = $("#"+idArray[i]).val();
-        
+
         //set stok property
         setStockProperty(sym, idArray[i], formValue);
-        
+
         // testing
         // console.log(formValue);
-        
+
         //clear input field
-        $("#"+idArray[i]).val(""); 
+        $("#"+idArray[i]).val("");
     }
-    
+
 }
 
-//Get Text from inputer box
-document.getElementById('search').addEventListener('click', function(){
- var sText=document.getElementById('sBox').value
-});
+// // TODO: SEARCH FUNCTION
+// document.getElementById('search').addEventListener('click', function(){
+//  var sText=document.getElementById('sBox').value
+// });
