@@ -4,7 +4,20 @@ var stocks = {};
 
 //functions to run when DOM is ready
 $(document).ready(function(){
+  //Add current Date to Date field
+  var date = new Date();
+
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
   
+  if (month < 10) month = "0" + month;
+  if (day < 10) day = "0" + day;
+  
+  var today = year + "-" + month + "-" + day;
+  
+  
+  document.getElementById('date').value = today;
 
     $("#submit").click(function(e){
         e.preventDefault()//prevent page refresh
