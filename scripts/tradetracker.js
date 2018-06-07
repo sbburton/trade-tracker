@@ -22,12 +22,15 @@ $(document).ready(function(){
     $("#submit").click(function(e){
         e.preventDefault()//prevent page refresh
 
+
         console.log("clicked"); //test
 
         //get value from form and transfer into a new stock object
         getFormValue(stockPropertyIdArray);
         console.log(stocks); //test
     })
+
+    {passive: true}
 
 });
 
