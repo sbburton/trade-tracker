@@ -4,22 +4,22 @@ div {
 }
 /* #addItem {
    width: 50%; 
-   padding: 10px;
- } 
- 
- 
- #inputform {
+   padding: 20px;
+ }  
+*/
+#inputform {
    padding: 30px;
- } */
+ } 
 
- /*.btn-primary {
+ .btn-primary {
    margin: 20px;
- }*/
+ }
  
 /* input {
-/*   margin-bottom: 30px;
-/* }
-/* 
-/* select {
-/*   margin-bottom: 30px;
-/* } */
+    margin-bottom: 30px;
+ }
+
+  select {
+    margin-bottom: 30px;
+ }  
+ */
