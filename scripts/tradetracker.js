@@ -1,6 +1,8 @@
 //initialize variables
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-var stocks = {};
+const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
+var stocks = [];
+var stockIndex = 0;
 
 //functions to run when DOM is ready
 $(document).ready(function(){
@@ -28,6 +30,8 @@ $(document).ready(function(){
         //get value from form and transfer into a new stock object
         getFormValue(stockPropertyIdArray);
         console.log(stocks); //test
+        
+        displayStock();
     })
 
     {passive: true}
@@ -54,9 +58,10 @@ function setStockProperty(sym,propertyName,propertyValue) {
 function getFormValue (idArray){
 
     //create a new stock object inside the stocks object as a property
-    var sym = $("#symbol").val();
-    stocks[sym] = new stockObj;
 
+    // var sym = $("#symbol").val();
+    stocks[stockIndex] = new stockObj;
+    
     //cycle through all input ids
     for (i=0;i<idArray.length;i++){
 
@@ -64,7 +69,9 @@ function getFormValue (idArray){
         var formValue = $("#"+idArray[i]).val();
 
         //set stok property
-        setStockProperty(sym, idArray[i], formValue);
+
+        setStockProperty(stockIndex, idArray[i], formValue);
+        
 
         // testing
         // console.log(formValue);
@@ -72,7 +79,44 @@ function getFormValue (idArray){
         //clear input field
         $("#"+idArray[i]).val("");
     }
+    
+    stockIndex++;
+    
+}
 
+function displayStock(){
+    
+    
+    $("#stockTable").html(""); //clear table content
+    
+    $("#stockTable").append("<tr id='tableColumns'></tr>")
+    for(i=0;i<tableColumns.length;i++){
+        $("#tableColumns").append("<th>"+tableColumns[i]+"</th>")
+    }
+    
+    for(i=0;i<stocks.length;i++){
+        var id = "stock"+i
+        $("#stockTable").append("<tr id="+id+"></tr>")
+        // $("#"+id).append("<td>Test</td>");
+        console.log(id);
+        var singleStockObj = stocks[i];
+        for(var j in singleStockObj){
+            if(singleStockObj.hasOwnProperty(j)){
+                $("#"+id).append("<td>"+singleStockObj[j]+"<td>")
+            }
+        }
+    }
+    
+    
+    
+    
+    // for(i=0;i<stocks.length;i++){
+        
+    //     var sym = stocks[i].symbol;
+    //     var listItem = "<li>"+sym+"</li>"
+    //     $("#stockList").append(listItem);
+    // }
+    
 }
 
 // // TODO: SEARCH FUNCTION

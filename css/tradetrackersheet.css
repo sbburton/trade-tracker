@@ -1,10 +1,45 @@
-
+#labels {
+ display: inline;
+  float: right;
+}
 /* #addItem {
    width: 50%; 
    padding: 20px;
  }  
 */
 #inputform {
+<<<<<<< HEAD
+  padding: 30px;
+}
+
+.btn-primary {
+  margin: 20px;
+}
+
+input {
+  margin-bottom: 30px;
+}
+
+select {
+  margin-bottom: 30px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+=======
    padding: 30px;
  } 
 
@@ -20,3 +55,4 @@
     margin-bottom: 30px;
  }  
  */
+>>>>>>> 3088edd3da4b0bff5150f6e97b15865d622d273a

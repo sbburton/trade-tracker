@@ -20,7 +20,8 @@
       <!--styling info above-->
 
     <div class="form-group container-fluid" id="inputform">
-
+       <div class="container" id="labels">
+        <p>Broker Status</p>
       <h2>Add Item:</h2>
       <p>Broker</p>
       <p>Status:</p>
@@ -28,27 +29,22 @@
 
         <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
 
-    <!--    <label for="company">Company</label> -->
+
+        <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
         <input placeholder= "Company" type="text" name="company" id="company"/>
-
-    <!--    <label for="price">Price</label> -->
         <input placeholder="Price" type="number" name="price" id="price"/>
-
-     <!--   <label for="clientName">Client Name</label> -->
         <input placeholder= "Client" type="text"  name="clientName" id="clientName"/>
-
-     <!--   <label for="date">Date</label> -->
-        <input type="date"  name="date" id="date" value="javascript:document.write(Date()+'.')"/>
+        <input type="date"  name="date" id="date"/>
 
 
-        <label for="broker">Broker</label>
+      <!--  <label for="broker">Broker</label> -->
         <select  name="broker" id="broker">
           <option value="reese" selected>Reese</option>
           <option value="arnell" selected>Arnell</option>
         </select>
 
 
-        <label for="status">Status</label>
+        <!-- <label for="status">Status</label> -->
         <select  name="status" id="status">
           <option value="purchased" selected>Purchased</option>
           <option value="watched">Watched</option>
@@ -61,6 +57,8 @@
       </form>
 
     </div>
+
+    <table id="stockTable"></table>
 
 
 
