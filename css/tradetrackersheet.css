@@ -8,7 +8,6 @@
  }  
 */
 #inputform {
-<<<<<<< HEAD
   padding: 30px;
 }
 
@@ -27,7 +26,7 @@ select {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 100% !important;
 }
 
 td, th {
@@ -37,9 +36,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
-}
-=======
+  background-color: #dddddd;
    padding: 30px;
  } 
 
@@ -55,4 +52,4 @@ tr:nth-child(even) {
     margin-bottom: 30px;
  }  
  */
->>>>>>> 3088edd3da4b0bff5150f6e97b15865d622d273a
+

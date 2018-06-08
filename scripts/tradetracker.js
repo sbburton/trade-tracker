@@ -50,8 +50,8 @@ function stockObj (){
 }
 
 //Function to set property of a specified stock indexed by its symbol
-function setStockProperty(sym,propertyName,propertyValue) {
-    stocks[sym][propertyName] = propertyValue;
+function setStockProperty(index,propertyName,propertyValue) {
+    stocks[index][propertyName] = propertyValue;
 }
 
 //Function to get value from form input and set as stock obj property
@@ -100,16 +100,14 @@ function displayStock(){
         // $("#"+id).append("<td>Test</td>");
         console.log(id);
         var singleStockObj = stocks[i];
-        for(var j in singleStockObj){
-            if(singleStockObj.hasOwnProperty(j)){
-                $("#"+id).append("<td>"+singleStockObj[j]+"<td>")
-            }
+        for(j=0;j<stockPropertyIdArray.length;j++){
+            var stockProperty = stockPropertyIdArray[j];
+            $("#"+id).append("<td>"+singleStockObj[stockProperty]+"</td>")
+            console.log("appended");
         }
     }
     
-    
-    
-    
+
     // for(i=0;i<stocks.length;i++){
         
     //     var sym = stocks[i].symbol;
