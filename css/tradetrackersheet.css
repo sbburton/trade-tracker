@@ -2,14 +2,14 @@
  display: inline;
   float: right;
 }
-#addItem {
+/*#addItem {
 
    width: 50%; 
    padding: 20px;
- }  
+ }  */
 
 #inputform {
- background-color: #7575;
+ background-color: #575;
   padding: 30px;
 }
 
