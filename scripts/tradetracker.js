@@ -8,13 +8,13 @@ var stockIndex = 0;
 $(document).ready(function(){
    
    
-   
-    $('#submit').click(function(){
-        $('#broker').val('Arnell'); //value of your default option
-    });
-    $('#submit').click(function(){
-        $('#status').val('purchased'); //value of your default option
-    });
+   //  supoose to have the drop down with default values
+  //  $('#submit').click(function(){
+   //     $('#broker').val('Arnell'); //value of your default option
+   // });
+   // $('#submit').click(function(){
+   //     $('#status').val('purchased'); //value of your default option
+   // });
 
 
     //Add current Date to Date field
