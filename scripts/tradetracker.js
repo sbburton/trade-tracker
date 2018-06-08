@@ -7,20 +7,8 @@ var stockIndex = 0;
 //functions to run when DOM is ready
 $(document).ready(function(){
   //Add current Date to Date field
-  var date = new Date();
-
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
   
-  if (month < 10) month = "0" + month;
-  if (day < 10) day = "0" + day;
-  
-  var today = year + "-" + month + "-" + day;
-  
-  
-  document.getElementById('date').value = today;
-
+    tDate();
     $("#submit").click(function(e){
         e.preventDefault()//prevent page refresh
 
@@ -32,6 +20,7 @@ $(document).ready(function(){
         console.log(stocks); //test
         
         displayStock();
+        tDate();
     })
 
     {passive: true}
@@ -106,7 +95,7 @@ function displayStock(){
             }
         }
     }
-    
+   
     
     
     
@@ -118,6 +107,23 @@ function displayStock(){
     // }
     
 }
+function tDate(){
+
+  
+    var date = new Date();
+  
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+    
+    var today = year + "-" + month + "-" + day;
+    
+    
+    document.getElementById('date').value = today;
+    }  
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
