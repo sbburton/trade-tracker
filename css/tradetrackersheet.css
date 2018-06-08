@@ -30,7 +30,7 @@ select {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 100% !important;
 }
 
 td, th {
@@ -41,4 +41,20 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+    padding: 30px;
 }
+  
+
+ /*.btn-primary {
+   margin: 20px;
+ }
+ 
+/* input {
+    margin-bottom: 30px;
+ }
+
+  select {
+    margin-bottom: 30px;
+ }  
+ */
+
