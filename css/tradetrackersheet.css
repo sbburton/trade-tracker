@@ -2,13 +2,14 @@
  display: inline;
   float: right;
 }
-/* #addItem {
+#addItem {
+
    width: 50%; 
    padding: 20px;
  }  
-*/
+
 #inputform {
-<<<<<<< HEAD
+ background-color: #7575;
   padding: 30px;
 }
 
@@ -39,20 +40,3 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-=======
-   padding: 30px;
- } 
-
- /*.btn-primary {
-   margin: 20px;
- }
- 
-/* input {
-    margin-bottom: 30px;
- }
-
-  select {
-    margin-bottom: 30px;
- }  
- */
->>>>>>> 3088edd3da4b0bff5150f6e97b15865d622d273a
