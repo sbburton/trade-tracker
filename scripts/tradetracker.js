@@ -6,12 +6,24 @@ var stockIndex = 0;
 
 //functions to run when DOM is ready
 $(document).ready(function(){
-  //Add current Date to Date field
-  
-    tDate();
+   
+   
+   
+    $('#submit').click(function(){
+        $('#broker').val('Arnell'); //value of your default option
+    });
+    $('#submit').click(function(){
+        $('#status').val('purchased'); //value of your default option
+    });
+
+
+    //Add current Date to Date field
+     tDate();
     $("#submit").click(function(e){
         e.preventDefault()//prevent page refresh
-
+     
+     //    
+      
 
         console.log("clicked"); //test
 
@@ -123,7 +135,9 @@ function tDate(){
     
     
     document.getElementById('date').value = today;
-    }  
+    }
+    
+   
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
