@@ -23,9 +23,12 @@
        <div class="container" id="labels">
         <p>Broker Status</p>
       <h2>Add Item:</h2>
-    </div>
-    
+      <p>Broker</p>
+      <p>Status:</p>
       <form id="addItem">
+
+        <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
+
 
         <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
         <input placeholder= "Company" type="text" name="company" id="company"/>
@@ -54,7 +57,7 @@
       </form>
 
     </div>
-    
+
     <table id="stockTable"></table>
 
 
@@ -68,6 +71,7 @@
   <div class="container">
   </div>
    <script src="scripts/tradetracker.js"></script>
+   <script src="scripts/validinput.js"></script>
   </body>
 
 </html>
