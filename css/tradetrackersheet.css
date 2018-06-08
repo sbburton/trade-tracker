@@ -1,4 +1,7 @@
-
+#labels {
+ display: inline;
+  float: right;
+}
 /* #addItem {
    width: 50%; 
    padding: 20px;

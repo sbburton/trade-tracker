@@ -20,10 +20,11 @@
       <!--styling info above-->
 
     <div class="form-group container-fluid" id="inputform">
-
+       <div class="container" id="labels">
+        <p>Broker Status</p>
       <h2>Add Item:</h2>
-      <p id="lBroker">Broker</p>
-      <p id="lStatus">Status:</p>
+    </div>
+    
       <form id="addItem">
 
         <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
@@ -33,14 +34,14 @@
         <input type="date"  name="date" id="date"/>
 
 
-        <label for="broker">Broker</label>
+      <!--  <label for="broker">Broker</label> -->
         <select  name="broker" id="broker">
           <option value="reese" selected>Reese</option>
           <option value="arnell" selected>Arnell</option>
         </select>
 
 
-        <label for="status">Status</label>
+        <!-- <label for="status">Status</label> -->
         <select  name="status" id="status">
           <option value="purchased" selected>Purchased</option>
           <option value="watched">Watched</option>
