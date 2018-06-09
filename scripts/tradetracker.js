@@ -7,17 +7,12 @@ var stockIndex = 0;
 //functions to run when DOM is ready
 $(document).ready(function(){
    
-   
-   //  supoose to have the drop down with default values
-  //  $('#submit').click(function(){
-   //     $('#broker').val('Arnell'); //value of your default option
-   // });
-   // $('#submit').click(function(){
-   //     $('#status').val('purchased'); //value of your default option
-   // });
 
     //load stock table
     displayStock();
+    
+    //load date on input form
+    tDate();
     
     $("#submit").click(function(e){
 
@@ -35,6 +30,10 @@ $(document).ready(function(){
         
         //Add current Date to Date field
         tDate();
+        
+         //Reset input form values
+        $('#broker').val('Arnell'); //value of your default option
+        $('#status').val('purchased'); //value of your default option
     });
 
 

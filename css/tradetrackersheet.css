@@ -31,6 +31,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100% !important;
+    margin-top:0;
 }
 
 td, th {
