@@ -3,8 +3,8 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+ <!--   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->   
+   <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/tradetrackersheet.css">
     <script src="scripts/jquery/jquery-3.3.1.js"></script>
 
@@ -14,17 +14,18 @@
     <title>Trade Tracker</title>
   </head>
   <body>
-
     <!--user input form-->
     <!--https://getbootstrap.com/docs/4.0/components/forms/-->
       <!--styling info above-->
 
-    <div class="form-group container-fluid" id="inputform">
+    <div class="form-group" id="inputform">
        <div class="container" id="labels">
-        <p>Broker Status</p>
-      <h2>Add Item:</h2>
-      <p>Broker</p>
-      <p>Status:</p>
+
+          <h1>Trade Tracker</h1>
+  <!--    <h2>Add Item:</h2>  -->
+    </div>
+    
+
       <form id="addItem">
         <input placeholder="Symbol" type="text"  name="symbol" id="symbol"/> <!-- form-group -->
         <input placeholder= "Company" type="text" name="company" id="company"/>
@@ -33,15 +34,15 @@
         <input type="date"  name="date" id="date"/>
 
 
-      <!--  <label for="broker">Broker</label> -->
-        <select  name="broker" id="broker">
-          <option value="reese" selected>Reese</option>
-          <option value="arnell" selected>Arnell</option>
+    
+        <select  name="broker" id="broker" default="Arnell">
+          <option value="Reece" selected>Reece</option>
+          <option value="Arnell" selected>Arnell</option>
         </select>
 
 
-        <!-- <label for="status">Status</label> -->
-        <select  name="status" id="status">
+        
+        <select  name="status" id="status" default="Purchased">
           <option value="purchased" selected>Purchased</option>
           <option value="watched">Watched</option>
           <option value="sold">Sold</option>
@@ -66,8 +67,12 @@
    <!-- </div>-->
   <div class="container">
   </div>
-   <script src="scripts/tradetracker.js"></script>
-   <!--<script src="scripts/validinput.js"></script>-->
+
+     <script src="scripts/popper.js/popper.js"></script>
+     <script src="scripts/popper.js/tooltip.js"></script>
+     <script src="scripts/tradetracker.js"></script>
+     <script src="scripts/validinput.js"></script>
+
   </body>
 
 </html>

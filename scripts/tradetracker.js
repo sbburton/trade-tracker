@@ -6,30 +6,32 @@ var stockIndex = 0;
 
 //functions to run when DOM is ready
 $(document).ready(function(){
-  //Add current Date to Date field
-  var date = new Date();
+   
+   
+   //  supoose to have the drop down with default values
+  //  $('#submit').click(function(){
+   //     $('#broker').val('Arnell'); //value of your default option
+   // });
+   // $('#submit').click(function(){
+   //     $('#status').val('purchased'); //value of your default option
+   // });
 
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
-  
-  if (month < 10) month = "0" + month;
-  if (day < 10) day = "0" + day;
-  
-  var today = year + "-" + month + "-" + day;
-  
-  
-  document.getElementById('date').value = today;
 
+    //Add current Date to Date field
+     tDate();
     $("#submit").click(function(e){
+
         e.preventDefault();//prevent page refresh
+
 
         //get value from form and transfer into a new stock object
         getFormValue(stockPropertyIdArray);
         
         displayStock();
+
         addToggle();
     });
+
 
     {passive: true}
     
@@ -112,7 +114,11 @@ function displayStock(){
             // console.log("appended");
         }
     }
+   
     
+    
+    
+
     addToggle();
 }
 
@@ -123,6 +129,7 @@ function addToggle() {
         var status = stocks[i].status
         $("#"+i+" .status").html("<button class='toggleButton'>"+status+"</button>");
     }
+
     
     $(".toggleButton").click(function(e){
         var targetStock = stocks[e.target.parentElement.parentElement.id];
@@ -140,6 +147,25 @@ function addToggle() {
         
     });
 }
+function tDate(){
+
+  
+    var date = new Date();
+  
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+    
+    var today = year + "-" + month + "-" + day;
+    
+    
+    document.getElementById('date').value = today;
+    }
+    
+   
 
 
 
