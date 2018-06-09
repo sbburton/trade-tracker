@@ -38,7 +38,12 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
    padding: 30px;
- } 
+ }
+ 
+ button{
+     margin-left:10px;
+     width:120px;
+ }
 
  /*.btn-primary {
    margin: 20px;

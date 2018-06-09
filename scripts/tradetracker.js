@@ -22,21 +22,20 @@ $(document).ready(function(){
   document.getElementById('date').value = today;
 
     $("#submit").click(function(e){
-        e.preventDefault()//prevent page refresh
-
-
-        console.log("clicked"); //test
+        e.preventDefault();//prevent page refresh
 
         //get value from form and transfer into a new stock object
         getFormValue(stockPropertyIdArray);
-        console.log(stocks); //test
         
         displayStock();
-    })
+        addToggle();
+    });
 
     {passive: true}
-
+    
+    
 });
+
 
 //Create stock object prototype
 function stockObj (){
@@ -86,36 +85,63 @@ function getFormValue (idArray){
 
 function displayStock(){
     
-    
     $("#stockTable").html(""); //clear table content
     
     $("#stockTable").append("<tr id='tableColumns'></tr>")
+    
+    //Create header for table
     for(i=0;i<tableColumns.length;i++){
         $("#tableColumns").append("<th>"+tableColumns[i]+"</th>")
     }
     
+    //fill in the each row
     for(i=0;i<stocks.length;i++){
-        var id = "stock"+i
-        $("#stockTable").append("<tr id="+id+"></tr>")
+
+        $("#stockTable").append("<tr id="+i+"></tr>")
         // $("#"+id).append("<td>Test</td>");
-        console.log(id);
         var singleStockObj = stocks[i];
         for(j=0;j<stockPropertyIdArray.length;j++){
             var stockProperty = stockPropertyIdArray[j];
-            $("#"+id).append("<td>"+singleStockObj[stockProperty]+"</td>")
-            console.log("appended");
+            
+            //append each cell with stock property and name class after the property
+            $("#"+i).append(
+                "<td class="+stockProperty+">"
+                    +singleStockObj[stockProperty]
+                +"</td>")
+
+            // console.log("appended");
         }
     }
     
-
-    // for(i=0;i<stocks.length;i++){
-        
-    //     var sym = stocks[i].symbol;
-    //     var listItem = "<li>"+sym+"</li>"
-    //     $("#stockList").append(listItem);
-    // }
-    
+    addToggle();
 }
+
+
+
+function addToggle() {
+    for (i=0;i<stocks.length;i++){
+        var status = stocks[i].status
+        $("#"+i+" .status").html("<button class='toggleButton'>"+status+"</button>");
+    }
+    
+    $(".toggleButton").click(function(e){
+        var targetStock = stocks[e.target.parentElement.parentElement.id];
+        console.log ("toggled");
+        if(targetStock.status == "purchased"){
+            targetStock.status = "sold"
+        }else if (targetStock.status == "sold"){
+            targetStock.status = "watched"
+        }else if (targetStock.status == "watched"){
+            targetStock.status = "purchased"
+            //e.target.textContent = "purchased"
+        }
+        
+        displayStock();
+        
+    });
+}
+
+
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
