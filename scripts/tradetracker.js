@@ -17,8 +17,7 @@ $(document).ready(function(){
    // });
 
 
-    //Add current Date to Date field
-     tDate();
+    
     $("#submit").click(function(e){
 
         e.preventDefault();//prevent page refresh
@@ -27,9 +26,14 @@ $(document).ready(function(){
         //get value from form and transfer into a new stock object
         getFormValue(stockPropertyIdArray);
         
+        //show stock table
         displayStock();
-
+        
+        //addToggle buttons
         addToggle();
+        
+        //Add current Date to Date field
+        tDate();
     });
 
 
@@ -70,12 +74,7 @@ function getFormValue (idArray){
         var formValue = $("#"+idArray[i]).val();
 
         //set stok property
-
         setStockProperty(stockIndex, idArray[i], formValue);
-        
-
-        // testing
-        // console.log(formValue);
 
         //clear input field
         $("#"+idArray[i]).val("");
@@ -115,38 +114,41 @@ function displayStock(){
         }
     }
    
-    
-    
-    
-
+   //Add toggle buttons
     addToggle();
 }
 
 
-
+//function to add toggle buttons
 function addToggle() {
+    
+    //relace text in status column with button elements
     for (i=0;i<stocks.length;i++){
         var status = stocks[i].status
         $("#"+i+" .status").html("<button class='toggleButton'>"+status+"</button>");
     }
 
-    
+    //add event listener to buttons
     $(".toggleButton").click(function(e){
+        
+        //find the stock object being clicked  
         var targetStock = stocks[e.target.parentElement.parentElement.id];
-        console.log ("toggled");
+        
+        //toggle stock object state when button is clicked
         if(targetStock.status == "purchased"){
             targetStock.status = "sold"
         }else if (targetStock.status == "sold"){
             targetStock.status = "watched"
         }else if (targetStock.status == "watched"){
             targetStock.status = "purchased"
-            //e.target.textContent = "purchased"
         }
         
+        //update stock table
         displayStock();
         
     });
 }
+
 function tDate(){
 
   
