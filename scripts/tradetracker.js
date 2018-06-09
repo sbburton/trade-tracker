@@ -16,7 +16,8 @@ $(document).ready(function(){
    //     $('#status').val('purchased'); //value of your default option
    // });
 
-
+    //load stock table
+    displayStock();
     
     $("#submit").click(function(e){
 
