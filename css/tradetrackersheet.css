@@ -32,11 +32,12 @@ table {
     border-collapse: collapse;
     width: 100% !important;
     margin-top:0;
+    text-align: center;
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
 }
 
@@ -62,6 +63,8 @@ tr:nth-child(even) {
      background:green;
      border:1px solid green;
      color:white;
+     opacity:0.8;
+     cursor: pointer;
  }
  
  .WATCHED{
@@ -72,6 +75,8 @@ tr:nth-child(even) {
      background:darkblue;
      border:1px solid darkblue;
      color:white;
+     opacity:0.8;
+     cursor: pointer;
  }
  
  .SOLD{
@@ -82,6 +87,8 @@ tr:nth-child(even) {
      background:black;
      border:1px solid black;
      color:white;
+     opacity:0.8;
+     cursor: pointer;
  }
 
  /*.btn-primary {
