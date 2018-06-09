@@ -46,11 +46,43 @@ tr:nth-child(even) {
    padding: 30px;
  }
  
- button{
+ .toggleButton{
      margin-left:10px;
      width:120px;
+     color:black;
+     background:transparent;
+     border-radius:5px;
  }
-
+ 
+ .PURCHASED{
+     color:green;
+     border:2px solid green;
+ }
+ .PURCHASED:hover{
+     background:green;
+     border:2px solid green;
+     color:white;
+ }
+ 
+ .WATCHED{
+     color:darkblue;
+     border:2px solid darkblue;
+ }
+  .WATCHED:hover{
+     background:darkblue;
+     border:2px solid darkblue;
+     color:white;
+ }
+ 
+ .SOLD{
+     color:black;
+     border:2px solid black;
+ }
+ .SOLD:hover{
+     background:black;
+     border:2px solid black;
+     color:white;
+ }
 
  /*.btn-primary {
    margin: 20px;

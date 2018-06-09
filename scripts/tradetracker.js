@@ -127,7 +127,7 @@ function addToggle() {
     //relace text in status column with button elements
     for (i=0;i<stocks.length;i++){
         var status = stocks[i].status
-        $("#"+i+" .status").html("<button class='toggleButton'>"+status+"</button>");
+        $("#"+i+" .status").html("<button class='toggleButton "+status+"'"+">"+status+"</button>");
     }
 
     //add event listener to buttons
@@ -137,12 +137,12 @@ function addToggle() {
         var targetStock = stocks[e.target.parentElement.parentElement.id];
         
         //toggle stock object state when button is clicked
-        if(targetStock.status == "purchased"){
-            targetStock.status = "sold"
-        }else if (targetStock.status == "sold"){
-            targetStock.status = "watched"
-        }else if (targetStock.status == "watched"){
-            targetStock.status = "purchased"
+        if(targetStock.status == "PURCHASED"){
+            targetStock.status = "SOLD"
+        }else if (targetStock.status == "SOLD"){
+            targetStock.status = "WATCHED"
+        }else if (targetStock.status == "WATCHED"){
+            targetStock.status = "PURCHASED"
         }
         
         //update stock table
