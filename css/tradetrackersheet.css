@@ -56,31 +56,31 @@ tr:nth-child(even) {
  
  .PURCHASED{
      color:green;
-     border:2px solid green;
+     border:1px solid green;
  }
  .PURCHASED:hover{
      background:green;
-     border:2px solid green;
+     border:1px solid green;
      color:white;
  }
  
  .WATCHED{
      color:darkblue;
-     border:2px solid darkblue;
+     border:1px solid darkblue;
  }
   .WATCHED:hover{
      background:darkblue;
-     border:2px solid darkblue;
+     border:1px solid darkblue;
      color:white;
  }
  
  .SOLD{
      color:black;
-     border:2px solid black;
+     border:1px solid black;
  }
  .SOLD:hover{
      background:black;
-     border:2px solid black;
+     border:1px solid black;
      color:white;
  }
 
