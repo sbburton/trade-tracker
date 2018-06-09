@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 
         //get value from form and transfer into a new stock object
-        getFormValue(stockPropertyIdArray);
+        createStockFromInput(stockPropertyIdArray);
         
         //show stock table
         displayStock();
@@ -54,13 +54,15 @@ function stockObj (){
     this.status = ""; //green might indicate this variable has been taken. check if run into problem
 }
 
+
+
 //Function to set property of a specified stock indexed by its symbol
 function setStockProperty(index,propertyName,propertyValue) {
     stocks[index][propertyName] = propertyValue;
 }
 
 //Function to get value from form input and set as stock obj property
-function getFormValue (idArray){
+function createStockFromInput (idArray){
 
     //create a new stock object inside the stocks object as a property
 
@@ -71,7 +73,7 @@ function getFormValue (idArray){
     for (i=0;i<idArray.length;i++){
 
         //get value from each input field
-        var formValue = $("#"+idArray[i]).val();
+        var formValue = $("#"+idArray[i]).val().toUpperCase();
 
         //set stok property
         setStockProperty(stockIndex, idArray[i], formValue);
@@ -150,7 +152,6 @@ function addToggle() {
 }
 
 function tDate(){
-
   
     var date = new Date();
   
@@ -163,13 +164,8 @@ function tDate(){
     
     var today = year + "-" + month + "-" + day;
     
-    
     document.getElementById('date').value = today;
     }
-    
-   
-
-
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
