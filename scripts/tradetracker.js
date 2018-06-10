@@ -120,6 +120,7 @@ function displayStock(){
    
    //Add toggle buttons
     addToggle();
+    
 }
 
 
@@ -168,18 +169,24 @@ function tDate(){
     
     document.getElementById('date').value = today;
     }
-function fDate(){
+function fDate(cDate){
     for (i=0;i<stocks.length; i++){
-       var aDate= stocks[i].date.split('-');
-       var mYear=aDate.shift();
-       aDate.push(mYear);
-       var cDate=aDate.join("-");
-
-
+   //    var orgDate= stocks[i].date.split('-');
+       var orgDate= stocks[i].date
+       var arrDate= orgDate.split('-');
+       var mYear=arrDate.shift();
+       arrDate.push(mYear);
+       var cDate=arrDate.join("-");
+       stocks[i].date=cDate;
     
+       console.log("Org:",orgDate, "  C:",cDate);
     
 
-        console.log(cDate);
+
+    return cDate;
+    
+
+       
     }
 }
 
