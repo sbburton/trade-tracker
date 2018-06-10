@@ -174,11 +174,12 @@ function fDate(){
        var mYear=aDate.shift();
        aDate.push(mYear);
        var cDate=aDate.join("-");
-    var nDate=cDate.replace(cDate, stocks[i].date);
+
+
     
     
 
-        console.log(nDate);
+        console.log(cDate);
     }
 }
 
