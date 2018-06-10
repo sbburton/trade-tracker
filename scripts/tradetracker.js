@@ -31,11 +31,13 @@ $(document).ready(function(){
         //Add current Date to Date field
         tDate();
         
+    
          //Reset input form values
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
     });
-
+    
+        
 
     {passive: true}
     
@@ -170,15 +172,14 @@ function fDate(){
     for (i=0;i<stocks.length; i++){
        var aDate= stocks[i].date.split('-');
        var mYear=aDate.shift();
-        aDate.push(mYear);
-      var nDate=aDate.join("-");
+       aDate.push(mYear);
+       var cDate=aDate.join("-");
+    var nDate=cDate.replace(cDate, stocks[i].date);
     
-       
-        
-      
-      console.log(nDate);
-    }
+    
 
+        console.log(nDate);
+    }
 }
 
 // // TODO: SEARCH FUNCTION
