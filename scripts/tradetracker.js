@@ -170,14 +170,13 @@ function fDate(){
     for (i=0;i<stocks.length; i++){
        var aDate= stocks[i].date.split('-');
        var mYear=aDate.shift();
-       aDate.push(mYear);
-
-      
+        aDate.push(mYear);
+      var nDate=aDate.join("-");
     
        
         
       
-      console.log(aDate.join('-'));
+      console.log(nDate);
     }
 
 }
