@@ -166,6 +166,21 @@ function tDate(){
     
     document.getElementById('date').value = today;
     }
+function fDate(){
+    for (i=0;i<stocks.length; i++){
+       var aDate= stocks[i].date.split('-');
+       var mYear=aDate.shift();
+       aDate.push(mYear);
+
+      
+    
+       
+        
+      
+      console.log(aDate);
+    }
+
+}
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
