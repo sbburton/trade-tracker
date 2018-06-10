@@ -177,7 +177,7 @@ function fDate(){
        
         
       
-      console.log(aDate);
+      console.log(aDate.join('-'));
     }
 
 }
