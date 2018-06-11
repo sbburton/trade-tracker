@@ -176,12 +176,12 @@ function fDate(){
        var arrDate= orgDate.split('-');
        var mYear=arrDate.shift();
        arrDate.push(mYear);
-       var cDate=arrDate.join("-");
+       var cDate=arrDate.join("/");
        stocks[i].date=cDate;
-    
+       
        console.log(stocks[i].date);       
     }
-}
+}   
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
