@@ -35,6 +35,7 @@ $(document).ready(function(){
          //Reset input form values
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
+        fDate();
     });
     
         
@@ -177,10 +178,9 @@ function fDate(){
        var mYear=arrDate.shift();
        arrDate.push(mYear);
        var cDate=arrDate.join("/");
-       stocks[i].date=cDate;
-       
-       console.log(stocks[i].date);       
+       stocks[i].date=cDate;       
     }
+    displayStock();
 }   
 
 // // TODO: SEARCH FUNCTION
