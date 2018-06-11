@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		for (var i=0; i<inputList.length; i++){
 			if ($(`#${inputList[i]}`).val() == "" && errorCount === 0 && $("#error").text() != "Please fill out all fields!") {
 				console.log(inputList[i], ' blank');
-				$("#addItem").append("<p id='error' style='font-weight:bold; color:red; text-shadow:1px 1px #ffddbb;'>Please fill out all fields!</p>");
+				$("#addItem").append("<p id='error' style='font-weight:bold; color:red; text-shadow:1px 1px #400;'>Please fill out all fields!</p>");
 				errorCount++;
 			} else if (errorCount == 0) {
 				$("#error").remove();
