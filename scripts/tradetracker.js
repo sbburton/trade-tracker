@@ -6,14 +6,14 @@ var stockIndex = 0;
 
 //functions to run when DOM is ready
 $(document).ready(function(){
-   
+
 
     //load stock table
     displayStock();
-    
+
     //load date on input form
     tDate();
-    
+
     $("#submit").click(function(e){
 
         e.preventDefault();//prevent page refresh
@@ -21,28 +21,28 @@ $(document).ready(function(){
 
         //get value from form and transfer into a new stock object
         createStockFromInput(stockPropertyIdArray);
-        
+
         //show stock table
         displayStock();
-        
+
         //addToggle buttons
         addToggle();
-        
+
         //Add current Date to Date field
         tDate();
-        
-    
+
+
          //Reset input form values
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
         fDate();
     });
-    
-        
+
+
 
     {passive: true}
-    
-    
+
+
 });
 
 
@@ -67,16 +67,22 @@ function setStockProperty(index,propertyName,propertyValue) {
 //Function to get value from form input and set as stock obj property
 function createStockFromInput (idArray){
 
+    //check if any input values are null - if so do not pass go do not collect $200
+    for (var i=0; i<stockPropertyIdArray.length; i++){
+        if ($(`#${stockPropertyIdArray[i]}`).val() == "")
+            return null;
+    }
     //create a new stock object inside the stocks object as a property
-
-    // var sym = $("#symbol").val();
     stocks[stockIndex] = new stockObj;
-    
+
     //cycle through all input ids
     for (i=0;i<idArray.length;i++){
 
         //get value from each input field
         var formValue = $("#"+idArray[i]).val().toUpperCase();
+
+        if (!formValue)
+            return null;
 
         //set stok property
         setStockProperty(stockIndex, idArray[i], formValue);
@@ -84,22 +90,22 @@ function createStockFromInput (idArray){
         //clear input field
         $("#"+idArray[i]).val("");
     }
-    
+
     stockIndex++;
-    
+
 }
 
 function displayStock(){
-    
+
     $("#stockTable").html(""); //clear table content
-    
+
     $("#stockTable").append("<tr id='tableColumns'></tr>")
-    
+
     //Create header for table
     for(i=0;i<tableColumns.length;i++){
         $("#tableColumns").append("<th>"+tableColumns[i]+"</th>")
     }
-    
+
     //fill in the each row
     for(i=0;i<stocks.length;i++){
 
@@ -108,7 +114,7 @@ function displayStock(){
         var singleStockObj = stocks[i];
         for(j=0;j<stockPropertyIdArray.length;j++){
             var stockProperty = stockPropertyIdArray[j];
-            
+
             //append each cell with stock property and name class after the property
             $("#"+i).append(
                 "<td class="+stockProperty+">"
@@ -118,16 +124,16 @@ function displayStock(){
             // console.log("appended");
         }
     }
-   
+
    //Add toggle buttons
     addToggle();
-    
+
 }
 
 
 //function to add toggle buttons
 function addToggle() {
-    
+
     //relace text in status column with button elements
     for (i=0;i<stocks.length;i++){
         var status = stocks[i].status
@@ -136,10 +142,10 @@ function addToggle() {
 
     //add event listener to buttons
     $(".toggleButton").click(function(e){
-        
-        //find the stock object being clicked  
+
+        //find the stock object being clicked
         var targetStock = stocks[e.target.parentElement.parentElement.id];
-        
+
         //toggle stock object state when button is clicked
         if(targetStock.status == "PURCHASED"){
             targetStock.status = "SOLD"
@@ -148,26 +154,26 @@ function addToggle() {
         }else if (targetStock.status == "WATCHED"){
             targetStock.status = "PURCHASED"
         }
-        
+
         //update stock table
         displayStock();
-        
+
     });
 }
 
 function tDate(){
-  
+
     var date = new Date();
-  
+
     var day = date.getDate();
     var month = date.getMonth() + 1;
     var year = date.getFullYear();
-    
+
     if (month < 10) month = "0" + month;
     if (day < 10) day = "0" + day;
-    
+
     var today = year + "-" + month + "-" + day;
-    
+
     document.getElementById('date').value = today;
     }
 function fDate(){
@@ -178,10 +184,10 @@ function fDate(){
        var mYear=arrDate.shift();
        arrDate.push(mYear);
        var cDate=arrDate.join("/");
-       stocks[i].date=cDate;       
+       stocks[i].date=cDate;
     }
     displayStock();
-}   
+}
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
