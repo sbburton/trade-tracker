@@ -169,24 +169,17 @@ function tDate(){
     
     document.getElementById('date').value = today;
     }
-function fDate(cDate){
+function fDate(){
     for (i=0;i<stocks.length; i++){
-   //    var orgDate= stocks[i].date.split('-');
-       var orgDate= stocks[i].date
+
+       var orgDate= stocks[i].date;
        var arrDate= orgDate.split('-');
        var mYear=arrDate.shift();
        arrDate.push(mYear);
        var cDate=arrDate.join("-");
        stocks[i].date=cDate;
     
-       console.log("Org:",orgDate, "  C:",cDate);
-    
-
-
-    return cDate;
-    
-
-       
+       console.log(stocks[i].date);       
     }
 }
 
