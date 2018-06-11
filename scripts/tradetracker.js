@@ -169,6 +169,7 @@ function tDate(){
     
     document.getElementById('date').value = today;
     }
+    
 function fDate(){
     for (i=0;i<stocks.length; i++){
 
