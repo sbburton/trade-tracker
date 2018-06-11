@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	console.log('validinput.js connected');
+	// console.log('validinput.js connected');
 
 	document.getElementById("submit").addEventListener("click", function(e){
     e.preventDefault()//prevent page refresh
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var errorCount = 0;
 		for (var i=0; i<inputList.length; i++){
 			if ($(`#${inputList[i]}`).val() == "" && errorCount === 0 && $("#error").text() != "Please fill out all fields!") {
-				console.log(inputList[i], ' blank');
+				// console.log(inputList[i], ' blank');
 				$("#addItem").append("<p id='error' style='font-weight:bold; color:red; text-shadow:1px 1px #400;'>Please fill out all fields!</p>");
 				errorCount++;
 			} else if (errorCount == 0) {

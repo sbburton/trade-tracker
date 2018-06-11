@@ -58,7 +58,6 @@ function stockObj (){
 }
 
 
-
 //Function to set property of a specified stock indexed by its symbol
 function setStockProperty(index,propertyName,propertyValue) {
     stocks[index][propertyName] = propertyValue;
