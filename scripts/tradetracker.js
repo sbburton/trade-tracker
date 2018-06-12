@@ -1,8 +1,13 @@
 //initialize variables
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status","Delete"]
-var stocks = [];
-var stockIndex = 0;
+const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
+// added example inputs for stocks for testing purposes
+var stocks = [
+    {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
+    {symbol: "AMZN", company: "AMAZON", price: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
+    ];
+var stockIndex = 3;
 
 //functions to run when DOM is ready
 $(document).ready(function(){
@@ -42,7 +47,6 @@ $(document).ready(function(){
     });
 
 
-
     {passive: true}
 
 
@@ -59,7 +63,6 @@ function stockObj (){
     this.broker = "";
     this.status = ""; //green might indicate this variable has been taken. check if run into problem
 }
-
 
 
 //Function to set property of a specified stock indexed by its symbol
@@ -94,6 +97,7 @@ function createStockFromInput (idArray){
         $("#"+idArray[i]).val("");
     }
 
+    //move stock index
     stockIndex++;
 
 }
@@ -164,7 +168,6 @@ function addToggle() {
     });
 }
 
-// Put Today's Date into Date Field
 function tDate(){
 
     var date = new Date();                  
@@ -181,7 +184,7 @@ function tDate(){
     document.getElementById('date').value = today;
     }
 
- // Fix Date to display correctly on Table   
+  
 function fDate(){
     for (i=0;i<stocks.length; i++){
 
@@ -192,6 +195,7 @@ function fDate(){
        var cDate=arrDate.join("/");        
        stocks[i].date=cDate;                // Set Date back into field
     }
+    
     displayStock();
 }
 
