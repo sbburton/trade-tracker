@@ -36,7 +36,9 @@ $(document).ready(function(){
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
         fDate();
-        delStock();
+       // delStock();
+       
+
     });
 
 
@@ -199,6 +201,7 @@ function delStock(){
    for (i=0; i<stocks.length; i++){
        $("#"+i).append("<button id='del"+i+"' type='button' onClick='dele(this)'>Delete</button>");
          }
+        
        }
 
 // Delete Stock
@@ -210,53 +213,17 @@ function delStock(){
     }else{
     stocks.splice(i,1);
     }
-    console.log(i);
-    delStock();
+    console.log("Button Clicked:", i);
 }  
   
   
   
   
   
-       //  e.target ---
- // var button = document.getElementById('del');
-        //  button.addEventListener('click', function(e) {
-      
-          
-            
-            
-            //  });
 
-           //     if(stocks[i]===0){
-         //         delete stocks[0];  // deletes last stock
-         //     } else {
-         //       stocks.splice(i,1);  //  deletes from the stock array
-         //       stocks.sort();  //  re-index stock array -- may need ??
-          //    }
-    
-    
 
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
 //  var sText=document.getElementById('sBox').value
 // });
-
-
-
-
-
-
-
-// EventTarget.prototype.removeEventListener = function(type, callback) {
-//    if (!(type in this.listeners)) {
-//      return;
-//    }
-//    var stack = this.listeners[type];
-//    for (var i = 0, l = stack.length; i < l; i++) {
-//      if (stack[i] === callback){
-//        stack.splice(i, 1);
-//        return;
-//      }
-//    }
-//  };
