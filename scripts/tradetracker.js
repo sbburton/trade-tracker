@@ -168,6 +168,8 @@ function addToggle() {
     });
 }
 
+
+//Puts the Current Date into the Date Field on Form
 function tDate(){
 
     var date = new Date();                  
@@ -184,7 +186,7 @@ function tDate(){
     document.getElementById('date').value = today;
     }
 
-  
+  // Fixed Date display on Table
 function fDate(){
     for (i=0;i<stocks.length; i++){
 
