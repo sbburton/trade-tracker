@@ -43,13 +43,9 @@ $(document).ready(function(){
         fDate();
     });
 
-<<<<<<< HEAD
+
     {passive: true} //Added non-passive event listener to a scroll-blocking 'mousewheel' event. consider marking event handler as 'passive' to make the page more responsive.
-=======
 
-    {passive: true}
-
->>>>>>> 7768c2433ee3d3870ee0ef54b9262cb7fdf52c1a
 
 });
 
