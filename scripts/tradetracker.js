@@ -1,8 +1,13 @@
 //initialize variables
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
 const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
-var stocks = [];
-var stockIndex = 0;
+// added example inputs for stocks for testing purposes
+var stocks = [
+    {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
+    {symbol: "AMZN", company: "AMAZON", price: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
+    ];
+var stockIndex = 3;
 
 //functions to run when DOM is ready
 $(document).ready(function(){
@@ -37,7 +42,6 @@ $(document).ready(function(){
         $('#status').val('purchased'); //value of your default option
         fDate();
     });
-
 
 
     {passive: true}
