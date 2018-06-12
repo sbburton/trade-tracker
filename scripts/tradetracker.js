@@ -1,6 +1,6 @@
 //initialize variables
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
+const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status", "Delete"]
 // added example inputs for stocks for testing purposes
 var stocks = [
     {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
@@ -41,6 +41,9 @@ $(document).ready(function(){
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
         fDate();
+       // delStock();
+       
+
     });
 
 
@@ -166,13 +169,14 @@ function addToggle() {
 }
 
 
+//Puts the Current Date into the Date Field on Form
 function tDate(){
 
-    var date = new Date();
+    var date = new Date();                  
 
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
+    var day=date.getDate();             
+    var month=date.getMonth() + 1;
+    var year= date.getFullYear();
 
     if (month < 10) month = "0" + month;
     if (day < 10) day = "0" + day;
@@ -182,20 +186,47 @@ function tDate(){
     document.getElementById('date').value = today;
     }
 
-  
+  // Fixed Date display on Table
 function fDate(){
     for (i=0;i<stocks.length; i++){
 
-       var orgDate= stocks[i].date;
-       var arrDate= orgDate.split('-');
-       var mYear=arrDate.shift();
-       arrDate.push(mYear);
-       var cDate=arrDate.join("/");
-       stocks[i].date=cDate;
+       var orgDate= stocks[i].date;         // stockObj Date field
+       var arrDate= orgDate.split('-');    
+       var mYear=arrDate.shift();           // remove Year from front   
+       arrDate.push(mYear);                 // Place it at the end
+       var cDate=arrDate.join("/");        
+       stocks[i].date=cDate;                // Set Date back into field
     }
     
     displayStock();
 }
+
+// Delete Stock Button
+function delStock(){
+   var trash=[];                // empty array to create a 'undo' feature
+   for (i=0; i<stocks.length; i++){
+       $("#"+i).append("<button id='del"+i+"' type='button' onClick='dele(this)'>Delete</button>");
+         } 
+       }
+
+// Delete Stock
+   function dele(obj){
+    var id=obj.id;                  //  Retrieves the Button's ID
+    var i=id.replace(/\D/g,'');     // Strips Text from ID.
+    if (i==0){
+        delete stocks[i];           // removes the entry from the array
+    }else{                          // if 0 is left - delete 0 and empty array
+    stocks.splice(i,1);
+    }
+  //  console.log("Button Clicked:", i);   // 
+}  
+  
+  
+  
+  
+  
+
+
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
