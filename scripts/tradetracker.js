@@ -38,10 +38,7 @@ $(document).ready(function(){
         fDate();
     });
 
-
-
-    {passive: true}
-
+    {passive: true} //Added non-passive event listener to a scroll-blocking 'mousewheel' event. consider marking event handler as 'passive' to make the page more responsive.
 
 });
 
@@ -91,6 +88,7 @@ function createStockFromInput (idArray){
         $("#"+idArray[i]).val("");
     }
 
+    //move stock index
     stockIndex++;
 
 }
@@ -161,6 +159,7 @@ function addToggle() {
     });
 }
 
+
 function tDate(){
 
     var date = new Date();
@@ -176,7 +175,8 @@ function tDate(){
 
     document.getElementById('date').value = today;
     }
-    
+
+  
 function fDate(){
     for (i=0;i<stocks.length; i++){
 
@@ -187,6 +187,7 @@ function fDate(){
        var cDate=arrDate.join("/");
        stocks[i].date=cDate;
     }
+    
     displayStock();
 }
 
