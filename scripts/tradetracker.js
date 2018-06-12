@@ -1,6 +1,6 @@
 //initialize variables
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
+const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status", "Delete"]
 // added example inputs for stocks for testing purposes
 var stocks = [
     {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
