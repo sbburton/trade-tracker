@@ -1,6 +1,6 @@
 //initialize variables
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
+const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status","Delete"]
 var stocks = [];
 var stockIndex = 0;
 
@@ -161,13 +161,14 @@ function addToggle() {
     });
 }
 
+// Put Today's Date into Date Field
 function tDate(){
 
-    var date = new Date();
+    var date = new Date();                  
 
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
+    var day=date.getDate();             
+    var month=date.getMonth() + 1;
+    var year= date.getFullYear();
 
     if (month < 10) month = "0" + month;
     if (day < 10) day = "0" + day;
@@ -176,20 +177,55 @@ function tDate(){
 
     document.getElementById('date').value = today;
     }
+
+ // Fix Date to display correctly on Table   
 function fDate(){
     for (i=0;i<stocks.length; i++){
 
-       var orgDate= stocks[i].date;
-       var arrDate= orgDate.split('-');
-       var mYear=arrDate.shift();
-       arrDate.push(mYear);
-       var cDate=arrDate.join("/");
-       stocks[i].date=cDate;
+       var orgDate= stocks[i].date;         // stockObj Date field
+       var arrDate= orgDate.split('-');    
+       var mYear=arrDate.shift();           // remove Year from front   
+       arrDate.push(mYear);                 // Place it at the end
+       var cDate=arrDate.join("/");        
+       stocks[i].date=cDate;                // Set Date back into field
     }
     displayStock();
+}
+
+function delStock(){
+    for (i=0; i<stocks.length; i++){
+        $("#"+i).append("<button id='dele' type='button'>Delete</button>");
+          var button = document.getElementById('del');
+          button.addEventListener('click', function(e) {
+            
+              console.log('click', i);
+          });
+          
+        //  e.target ---
+    }
+    
 }
 
 // // TODO: SEARCH FUNCTION
 // document.getElementById('search').addEventListener('click', function(){
 //  var sText=document.getElementById('sBox').value
 // });
+
+
+
+
+
+
+
+// EventTarget.prototype.removeEventListener = function(type, callback) {
+//    if (!(type in this.listeners)) {
+//      return;
+//    }
+//    var stack = this.listeners[type];
+//    for (var i = 0, l = stack.length; i < l; i++) {
+//      if (stack[i] === callback){
+//        stack.splice(i, 1);
+//        return;
+//      }
+//    }
+//  };
