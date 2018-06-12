@@ -203,23 +203,22 @@ function fDate(){
 
 // Delete Stock Button
 function delStock(){
-   var trash=[];
+   var trash=[];                // empty array to create a 'undo' feature
    for (i=0; i<stocks.length; i++){
        $("#"+i).append("<button id='del"+i+"' type='button' onClick='dele(this)'>Delete</button>");
-         }
-        
+         } 
        }
 
 // Delete Stock
    function dele(obj){
-    var id=obj.id;
-    var i=id.replace(/\D/g,'');
+    var id=obj.id;                  //  Retrieves the Button's ID
+    var i=id.replace(/\D/g,'');     // Strips Text from ID.
     if (i==0){
-        delete stocks[i];
-    }else{
+        delete stocks[i];           // removes the entry from the array
+    }else{                          // if 0 is left - delete 0 and empty array
     stocks.splice(i,1);
     }
-    console.log("Button Clicked:", i);
+  //  console.log("Button Clicked:", i);   // 
 }  
   
   
