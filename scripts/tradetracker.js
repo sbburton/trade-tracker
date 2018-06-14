@@ -134,7 +134,7 @@ function displayStock(){
 
    //Add toggle buttons
     addToggle();
-
+    delStock();
 }
 
 
@@ -218,7 +218,7 @@ function delStock(){
     }else{                          // if 0 is left - delete 0 and empty array
     stocks.splice(i,1);
     }
-  //  console.log("Button Clicked:", i);   // 
+  displayStock();
 }  
   
   
