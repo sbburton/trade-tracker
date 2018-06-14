@@ -43,7 +43,7 @@ $(document).ready(function(){
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
         fDate();
-       // delStock();
+        delStock();
        
 
     });
