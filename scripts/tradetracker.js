@@ -43,7 +43,7 @@ $(document).ready(function(){
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
         fDate();
-        delStock();
+        // delStock();
        
 
     });
@@ -216,11 +216,11 @@ function delStock(){
    function dele(obj){
     var id=obj.id;                  //  Retrieves the Button's ID
     var i=id.replace(/\D/g,'');     // Strips Text from ID.
-    if (i==0){
-        delete stocks[i];           // removes the entry from the array
-    }else{                          // if 0 is left - delete 0 and empty array
+    // if (i==0){
+    //     delete stocks[i];           // removes the entry from the array
+    // }else{                          // if 0 is left - delete 0 and empty array
     stocks.splice(i,1);
-    }
+    // }
   displayStock();
 }  
   
