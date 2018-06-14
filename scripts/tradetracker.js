@@ -210,8 +210,8 @@ function delStock(){
 
 // Delete Stock
    function dele(obj){
-    var id=obj.id;
-    var sLen=stocks.length;                 //  Retrieves the Button's ID
+    var id=obj.id;                    //  Retrieves the Button's ID
+    var sLen=stocks.length;               
     var i=id.replace(/\D/g,'');     // Strips Text from ID.
     if (i==0 && sLen == 0){
         delete stocks[i];           // removes the entry from the array
