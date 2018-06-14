@@ -1,13 +1,15 @@
 //initialize variables
+
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
 const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status", "Delete"]
+
 // added example inputs for stocks for testing purposes
 var stocks = [
     {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
     {symbol: "AMZN", company: "AMAZON", price: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
     {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
     ];
-var stockIndex = 3;
+// var stockIndex = 3; // Obselete
 
 //functions to run when DOM is ready
 $(document).ready(function(){
@@ -78,6 +80,7 @@ function createStockFromInput (idArray){
             return null;
     }
     //create a new stock object inside the stocks object as a property
+    stockIndex = stocks.length; //reset index to one after the last object in array
     stocks[stockIndex] = new stockObj;
 
     //cycle through all input ids
@@ -105,9 +108,9 @@ function displayStock(){
 
     $("#stockTable").html(""); //clear table content
 
+    //Create header for table
     $("#stockTable").append("<tr id='tableColumns'></tr>")
 
-    //Create header for table
     for(i=0;i<tableColumns.length;i++){
         $("#tableColumns").append("<th>"+tableColumns[i]+"</th>")
     }
@@ -213,11 +216,11 @@ function delStock(){
     var id=obj.id;                    //  Retrieves the Button's ID
     var sLen=stocks.length;               
     var i=id.replace(/\D/g,'');     // Strips Text from ID.
-    if (i==0 && sLen == 0){
-        delete stocks[i];           // removes the entry from the array
-    }else{                          // if 0 is left - delete 0 and empty array
+    // if (i==0){
+    //     delete stocks[i];           // removes the entry from the array
+    // }else{                          // if 0 is left - delete 0 and empty array
     stocks.splice(i,1);
-    }
+    // }
   displayStock();
 }  
   
