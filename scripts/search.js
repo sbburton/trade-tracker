@@ -1,3 +1,9 @@
+const list=document.querySelector('#stockTable');
+
+//search stocks
+const searchBar=document.forms['search-stocks'].querySelector('input');
+console.log("searching");
+
 searchBar.addEventListener('keyup',function(e){
 
     var myList = document.getElementById("stockTable").childNodes;
