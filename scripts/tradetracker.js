@@ -76,7 +76,7 @@ function createStockFromInput (idArray){
             return null;
     }
     //create a new stock object inside the stocks object as a property
-    stockIndex = stocks.length; //reset index to the last object in array
+    stockIndex = stocks.length; //reset index to one after the last object in array
     stocks[stockIndex] = new stockObj;
 
     //cycle through all input ids
