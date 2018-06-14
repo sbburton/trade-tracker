@@ -104,9 +104,9 @@ function displayStock(){
 
     $("#stockTable").html(""); //clear table content
 
+    //Create header for table
     $("#stockTable").append("<tr id='tableColumns'></tr>")
 
-    //Create header for table
     for(i=0;i<tableColumns.length;i++){
         $("#tableColumns").append("<th>"+tableColumns[i]+"</th>")
     }
