@@ -1,13 +1,13 @@
 //initialize variables
-const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
+var stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
+var tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status"]
 // added example inputs for stocks for testing purposes
 var stocks = [
     {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
     {symbol: "AMZN", company: "AMAZON", price: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
     {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
     ];
-var stockIndex = 3;
+// var stockIndex = 3; // Obselete
 
 //functions to run when DOM is ready
 $(document).ready(function(){
@@ -76,6 +76,7 @@ function createStockFromInput (idArray){
             return null;
     }
     //create a new stock object inside the stocks object as a property
+    stockIndex = stocks.length; //reset index to the last object in array
     stocks[stockIndex] = new stockObj;
 
     //cycle through all input ids
