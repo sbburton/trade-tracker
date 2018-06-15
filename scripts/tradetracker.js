@@ -239,18 +239,4 @@ function confirm(element){
    $(row).fadeOut(1000);
      stocks.splice(i,1);
      }  
-  //  
- displayStock();
-    
-  
-  
-  
-  
-  
-
-
-
-// // TODO: SEARCH FUNCTION
-// document.getElementById('search').addEventListener('click', function(){
-//  var sText=document.getElementById('sBox').value
-// });
+     
