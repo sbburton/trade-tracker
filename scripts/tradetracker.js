@@ -212,6 +212,8 @@ function delStock(){
                 +"<button class='delete' id='del"+i+"' type='button' onClick='confirm(this)'>Delete</button>"
            +"</td>"
            );
+
+        
          } 
        }
 
@@ -231,14 +233,10 @@ function confirm(element){
 
 // Delete Stock
    function dele(obj){
-    var id=obj.id;                    //  Retrieves the Button's ID
-    var sLen=stocks.length;               
+    var id=obj.id;                    //  Retrieves the Button's ID              
     var i=id.replace(/\D/g,'');     // Strips Text from ID.
-    // if (i==0){
-    //     delete stocks[i];           // removes the entry from the array
-    // }else{                          // if 0 is left - delete 0 and empty array
     stocks.splice(i,1);
-    // }
+    
   displayStock();
 }  
   
