@@ -234,16 +234,14 @@ function confirm(element){
 // Delete Stock
    function dele(obj){
     var id=obj.id;                    //  Retrieves the Button's ID              
-    var i=id.replace(/\D/g,'');
-    console.log(i);      // Strips Text from ID.
-     $("#"+i).fadeOut(1000, function(){
-        stocks.splice(i,1);
-     });            
+    var i=id.replace(/\D/g,'');       // Strips Text from ID.
+    var row="#"+i;          
+   $(row).fadeOut(1000);
+     stocks.splice(i,1);
+     }  
   //  
-
-
-  displayStock();
-}  
+ displayStock();
+    
   
   
   
