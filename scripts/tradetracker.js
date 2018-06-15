@@ -1,7 +1,7 @@
 //initialize variables
 
 const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status", "Delete"]
+const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status", " "]
 
 // added example inputs for stocks for testing purposes
 var stocks = [
@@ -207,9 +207,27 @@ function fDate(){
 function delStock(){
    var trash=[];                // empty array to create a 'undo' feature
    for (i=0; i<stocks.length; i++){
-       $("#"+i).append("<button id='del"+i+"' type='button' onClick='dele(this)'>Delete</button>");
+       $("#"+i).append(
+           "<td>"
+                +"<button class='delete' id='del"+i+"' type='button' onClick='confirm(this)'>Delete</button>"
+           +"</td>"
+           );
          } 
        }
+
+function confirm(element){
+    
+    element.innerHTML="Confirm";
+    element.setAttribute('onClick','dele(this)');
+    // $(element).fadeTo(100,0.2)
+    //       .fadeTo(100,1)
+    //       .fadeTo(100,0.2)
+    //       .fadeTo(100,1)
+    // $(element).hide().slideDown(1000)
+    // console.log($(element));
+    // element.click(dele(element));
+    
+}
 
 // Delete Stock
    function dele(obj){
