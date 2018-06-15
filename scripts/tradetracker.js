@@ -221,22 +221,27 @@ function confirm(element){
     
     element.innerHTML="Confirm";
     element.setAttribute('onClick','dele(this)');
-    // $(element).fadeTo(100,0.2)
-    //       .fadeTo(100,1)
-    //       .fadeTo(100,0.2)
-    //       .fadeTo(100,1)
-    // $(element).hide().slideDown(1000)
-    // console.log($(element));
-    // element.click(dele(element));
+   // $(element).fadeTo(100,0.2)
+   // .fadeTo(100,1)
+   // .fadeTo(100,0.2)
+   // .fadeTo(100,1)
+   // $(element).hide().slideDown(1000)
+   // console.log($(element));
+   // element.click(dele(element));
     
 }
 
 // Delete Stock
    function dele(obj){
     var id=obj.id;                    //  Retrieves the Button's ID              
-    var i=id.replace(/\D/g,'');     // Strips Text from ID.
-    stocks.splice(i,1);
-    
+    var i=id.replace(/\D/g,'');
+    console.log(i);      // Strips Text from ID.
+     $("#"+i).fadeOut(1000, function(){
+        stocks.splice(i,1);
+     });            
+  //  
+
+
   displayStock();
 }  
   
