@@ -4,15 +4,11 @@ h1 {
   font-weight: bold;
   font-style: italic;
 }
-/*#addItem {
-
-   width: 50%; 
-   padding: 20px;
- }  */
 
 #inputform {
  background: linear-gradient(to top, #575 0%, rgba(0, 255, 0, 0.274) 100%);
   padding: 30px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn-primary {
@@ -28,24 +24,25 @@ select {
 }
 
 table {
-    font-family: arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border-collapse: collapse;
-    width: 100% !important;
-    margin-top:0;
+    width: 95% !important;
+    margin-top: 0;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    /*border: 1px solid #dddddd;*/
     text-align: center;
     padding: 8px;
+    border-bottom:1px solid grey;
 }
 
-tr:nth-child(even) {
-
-  background-color: #dddddd;
-   padding: 30px;
- }
+th {
+    color:darkblue;
+}
  
  .toggleButton{
      margin-left:10px;
@@ -54,6 +51,25 @@ tr:nth-child(even) {
      background:transparent;
      border-radius:5px;
  }
+ 
+ .delete{
+     color:red;
+     border:1px solid red;
+     border-radius:5px;
+     background:transparent;
+     width:100px;
+ }
+ 
+ .delete:hover{
+     color:white;
+     background-color:red;
+     border:1px solid red;
+     border-radius:5px;
+     cursor: pointer
+ }
+ .delete:focus {
+    outline:none;
+}
  
  .PURCHASED{
      color:green;
