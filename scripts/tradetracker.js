@@ -237,8 +237,8 @@ function confirm(element){
     var i=id.replace(/\D/g,'');       // Strips Text from ID.
     var row="#"+i;          
     $(row)
-    .css('background-color', 'rgba(190, 32, 32, 0.25)')
-    .fadeOut(1000);              //  Fades out stock on Table 
+       .css('background-color', 'rgba(190, 32, 32, 0.25)')
+       .fadeOut(1000);              //  Fades out stock on Table 
     stocks.splice(i,1);                //  Deletes from array.
 }  
      
