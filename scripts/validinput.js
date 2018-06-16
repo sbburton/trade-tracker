@@ -37,6 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Gather Stock List and Validate it
-$.getJSON("ajax/stockList.json", function(data){
-		console.log(data);
+$.getJSON("ajax/NASDAQ.json", function(stockInfo){
+		console.log(stockInfo);
 });
