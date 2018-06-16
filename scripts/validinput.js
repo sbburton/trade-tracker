@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var symbol = $("#symbol").val()
 		var company = $("#company").val()
 		var price = $("#price").val()
+		var quantity = $("#price").val()
 		var client = $("#clientName").val()
 		var date = $("#date").val()
 		var broker = $("#broker").val()
