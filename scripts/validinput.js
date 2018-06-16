@@ -37,6 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Gather Stock List and Validate it
-$.getJSON("ajax/NASDAQ.json", function(sInfo){
-		console.log(sInfo);				//  Display List of ID and Objets to console,
+$.getJSON("ajax/NASDAQ.json", futknction(stkInfo){
+		console.log(stkInfo);				//  Display List of ID and Objets to console,
 });
