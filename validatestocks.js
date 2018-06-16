@@ -10,3 +10,9 @@ var options = {
 
 var result = await stocks.timeSeries(options);
 
+//search stocks
+const list=document.querySelector('#stockTable');
+const searchBar=document.forms['search-stocks'].querySelector('input');
+
+searchBar.addEventListener('keyup',function(e){
+
