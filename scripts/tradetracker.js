@@ -4,7 +4,7 @@ const tableColumns = ["Symbol","Company","Price","Quantity","Total","Client Name
 // added example inputs for stocks for testing purposes
 var stocks = [
     {symbol: "FB", company: "FACEBOOK", price: "10", quantity: "1", total: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
-    {symbol: "AMZN", company: "AMAZON", price: "40", quantity: "1", total: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "AMZN", company: "AMAZON", price: "40", quantity: "1", total: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REECE", status: "WATCHED"},
     {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", quantity: "1", total: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
     ];
 // var stockIndex = 3; // Obselete
