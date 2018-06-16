@@ -2,7 +2,7 @@ const list=document.querySelector('#stockTable');
 
 //search stocks
 const searchBar=document.forms['search-stocks'].querySelector('input');
-console.log("searching");
+//console.log("searching");
 
 searchBar.addEventListener('keyup',function(e){
 
@@ -11,7 +11,7 @@ searchBar.addEventListener('keyup',function(e){
     var searchString = document.getElementById("search").value;
     var str = '';
 
-    console.log(myList.length);
+    //console.log(myList.length);
 
     for(var i = 1; i < myList.length; i++){
 
