@@ -1,12 +1,14 @@
 h1 {
+  color: white;
   text-align: center;
   font-family: verdana;
   font-weight: bold;
   font-style: italic;
+  margin-bottom: 30px;
 }
 
 #inputform {
- background: linear-gradient(to top, #575 0%, rgba(0, 255, 0, 0.274) 100%);
+ background: #003768 url('/blk-one-assets/cache-1528952368000/include/common/css/product-v3/i/mobile-chevron-down.png') 20px center no-repeat;
   padding: 30px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -16,7 +18,9 @@ h1 {
 }
 
 input {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  padding: 5px 10px;
 }
 
 select {
@@ -43,7 +47,7 @@ td, th {
 th {
     color:darkblue;
 }
- 
+
  .toggleButton{
      margin-left:10px;
      width:120px;
@@ -51,7 +55,7 @@ th {
      background:transparent;
      border-radius:5px;
  }
- 
+
  .delete{
      color:red;
      border:1px solid red;
@@ -59,7 +63,7 @@ th {
      background:transparent;
      width:100px;
  }
- 
+
  .delete:hover{
      color:white;
      background-color:red;
@@ -70,7 +74,7 @@ th {
  .delete:focus {
     outline:none;
 }
- 
+
  .PURCHASED{
      color:green;
      border:1px solid green;
@@ -82,7 +86,7 @@ th {
      opacity:0.8;
      cursor: pointer;
  }
- 
+
  .WATCHED{
      color:darkblue;
      border:1px solid darkblue;
@@ -94,7 +98,7 @@ th {
      opacity:0.8;
      cursor: pointer;
  }
- 
+
  .SOLD{
      color:black;
      border:1px solid black;
@@ -107,16 +111,33 @@ th {
      cursor: pointer;
  }
 
- /*.btn-primary {
-   margin: 20px;
- }
- 
-/* input {
-    margin-bottom: 30px;
- }
+input[type="text"],
+input[type="date"],
+select.form-control {
+  background: #fff;
+  border: 1px solid #333;
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
 
-  select {
-    margin-bottom: 30px;
- }  
- */
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
+label {
+  color: white;
+}
+
+input {
+  overflow-x: none;
+}
+
+.submit-button {
+  padding: 10px;
+  background: #003768 url('/blk-one-assets/cache-1528952368000/include/common/css/product-v3/i/mobile-chevron-down.png') 20px center no-repeat;
+  border-radius: 25px;
+}
