@@ -35,3 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 });
+
+
+$.getJSON("ajax/stockList.json", function(data){
+		console.log(data);
+});
