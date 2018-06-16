@@ -1,19 +1,13 @@
+//search stocks
 const list=document.querySelector('#stockTable');
-
-
-//filter Books
 const searchBar=document.forms['search-stocks'].querySelector('input');
-//console.log(searchBar);
 
 searchBar.addEventListener('keyup',function(e){
 
     var myList = document.getElementById("stockTable").childNodes;
-//    console.log(myList.length);
 
     var searchString = document.getElementById("search").value;
     var str = '';
-
-    console.log(myList.length);
 
     for(var i = 1; i < myList.length; i++){
 

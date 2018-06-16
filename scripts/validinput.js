@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var symbol = $("#symbol").val()
 		var company = $("#company").val()
 		var price = $("#price").val()
+		var quantity = $("#price").val()
 		var client = $("#clientName").val()
 		var date = $("#date").val()
 		var broker = $("#broker").val()
@@ -40,3 +41,4 @@ document.addEventListener("DOMContentLoaded", function() {
 $.getJSON("ajax/NASDAQ.json", function(stkInfo){
 		console.log(stkInfo);				//  Display List of ID and Objets to console,
 });
+

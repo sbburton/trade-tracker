@@ -1,19 +1,16 @@
 //initialize variables
-
-const stockPropertyIdArray = ["symbol","company","price","clientName", "date", "broker", "status"]
-const tableColumns = ["Symbol","Company","Price","Client Name", "Date", "Broker", "Status", " "]
-
+const stockPropertyIdArray = ["symbol","company","price","quantity", "total","clientName", "date", "broker", "status"]
+const tableColumns = ["Symbol","Company","Price","Quantity","Total","Client Name", "Date", "Broker", "Status", "Delete"]
 // added example inputs for stocks for testing purposes
 var stocks = [
-    {symbol: "FB", company: "FACEBOOK", price: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
-    {symbol: "AMZN", company: "AMAZON", price: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REECE", status: "WATCHED"},
-    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
+    {symbol: "FB", company: "FACEBOOK", price: "10", quantity: "1", total: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
+    {symbol: "AMZN", company: "AMAZON", price: "40", quantity: "1", total: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", quantity: "1", total: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
     ];
 // var stockIndex = 3; // Obselete
 
 //functions to run when DOM is ready
 $(document).ready(function(){
-
 
     //load stock table
     displayStock();
@@ -24,7 +21,6 @@ $(document).ready(function(){
     $("#submit").click(function(e){
 
         e.preventDefault();//prevent page refresh
-
 
         //get value from form and transfer into a new stock object
         createStockFromInput(stockPropertyIdArray);
@@ -38,18 +34,15 @@ $(document).ready(function(){
         //Add current Date to Date field
         tDate();
 
-
          //Reset input form values
         $('#broker').val('Arnell'); //value of your default option
         $('#status').val('purchased'); //value of your default option
         fDate();
-       
 
     });
 
 
     {passive: true} //Added non-passive event listener to a scroll-blocking 'mousewheel' event. consider marking event handler as 'passive' to make the page more responsive.
-
 
 });
 
@@ -59,6 +52,8 @@ function stockObj (){
     this.symbol = "";
     this.company = "";
     this.price = "";
+    this.quantity = "";
+    this.total = "";
     this.clientName = "";
     this.date = "";
     this.broker = "";
@@ -82,6 +77,9 @@ function createStockFromInput (idArray){
     //create a new stock object inside the stocks object as a property
     stockIndex = stocks.length; //reset index to one after the last object in array
     stocks[stockIndex] = new stockObj;
+
+
+    document.getElementById("total").value = document.getElementById("price").value * document.getElementById("quantity").value;
 
     //cycle through all input ids
     for (i=0;i<idArray.length;i++){
@@ -114,6 +112,9 @@ function displayStock(){
     for(i=0;i<tableColumns.length;i++){
         $("#tableColumns").append("<th>"+tableColumns[i]+"</th>")
     }
+
+    // Reset total field
+    document.getElementById("total").value = 0;
 
     //fill in the each row
     for(i=0;i<stocks.length;i++){
