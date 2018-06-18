@@ -141,3 +141,10 @@ input {
   background: #003768 url('/blk-one-assets/cache-1528952368000/include/common/css/product-v3/i/mobile-chevron-down.png') 20px center no-repeat;
   border-radius: 25px;
 }
+
+.logo {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    display: block;
+}
