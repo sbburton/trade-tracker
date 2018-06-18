@@ -12,7 +12,7 @@
   <style>
   </style>
 
-    <title>Trade Tracker</title>
+  <title>Trade Tracker</title>
   </head>
   <body>
 
@@ -45,7 +45,7 @@
             </div>
             <div class="col-xs-2 ">
               <input type="date"  name="date" id="date"/>
-              <label for="symbol">Symbol</label>
+              <label for="symbol">Date</label>
             </div>
             <input hidden = "true" placeholder="Total" type="number" name="total" id="total" value = "0"/>
           </div>
@@ -55,21 +55,21 @@
 
             <!--broker selection dropdown-->
             <div class="col-xs-2">
-              <label for="broker">Broker</label>
-              <select  name="broker" id="broker" default="Arnell">
+              <select class="selectpicker" data-live-search="true" name="broker" id="broker" default="Arnell">
                 <option value="Reece" selected>Reece</option>
                 <option value="Arnell" selected>Arnell</option>
               </select>
+              <label for="broker" class="select-label">Broker</label>
             </div>
 
             <!--status selection dropdown-->
             <div class="col-xs-2">
-              <label for="symbol">Status</label>
-              <select  name="status" id="status" default="Purchased">
+              <select class="selectpicker" name="status" id="status" default="Purchased">
                 <option value="purchased" selected>Purchased</option>
                 <option value="watched">Watched</option>
                 <option value="sold">Sold</option>
               </select>
+              <label for="symbol" class="select-label">Status</label>
             </div>
           </div>
 
@@ -90,8 +90,13 @@
     </div>
 
     <div class="container">
-      <form id="search-stocks">
-          <input id = "search" type="text" placeholder="Search..." />
+      <form id="search-stocks col-xs-6 col-xs-offset-4">
+          <input id="search" type="text" placeholder="Search..." />
+          <label for="search" style="color: #003768; margin-left: 10px">
+            <ion-icon name="arrow-dropleft"></ion-icon>
+            Search Stocks
+            <ion-icon name="arrow-dropright"></ion-icon>
+          </label>
       </form>
     </div>
 
@@ -109,6 +114,7 @@
      <script src="scripts/validinput.js"></script>
      <script src="scripts/search.js"></script>
      <script src ="scripts/validatestocks.js"></script>
+     <script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
 
   </body>
 
