@@ -3,9 +3,9 @@ const stockPropertyIdArray = ["symbol","company","price","quantity", "total","cl
 const tableColumns = ["Symbol","Company","Price","Quantity","Total","Client Name", "Date", "Broker", "Status", "Delete"]
 // added example inputs for stocks for testing purposes
 var stocks = [
-    {symbol: "FB", company: "FACEBOOK", price: "10", quantity: "1", total: "10", clientName: "JOHN", date: "06/11/2015", broker: "ARNELL", status: "PURCHASED"},
-    {symbol: "AMZN", company: "AMAZON", price: "40", quantity: "1", total: "40", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
-    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20", quantity: "1", total: "20", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
+    {symbol: "FB", company: "FACEBOOK", price: "10.08", quantity: "2", total: "20.16", clientName: "JOHN", date: "06/02/2015", broker: "ARNELL", status: "PURCHASED"},
+    {symbol: "AMZN", company: "AMAZON", price: "40.02", quantity: "1", total: "40.02", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20.05", quantity: "6", total: "120.30", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
     ];
 // var stockIndex = 3; // Obselete
 
@@ -79,7 +79,9 @@ function createStockFromInput (idArray){
     stocks[stockIndex] = new stockObj;
 
 
-    document.getElementById("total").value = document.getElementById("price").value * document.getElementById("quantity").value;
+    document.getElementById("total").value = parseFloat(document.getElementById("price").value * document.getElementById("quantity").value).toFixed(2);
+    // var twoPlacedFloat = parseFloat(yourString).toFixed(2)
+
 
     //cycle through all input ids
     for (i=0;i<idArray.length;i++){
@@ -175,9 +177,9 @@ function addToggle() {
 //Puts the Current Date into the Date Field on Form
 function tDate(){
 
-    var date = new Date();                  
+    var date = new Date();
 
-    var day=date.getDate();             
+    var day=date.getDate();
     var month=date.getMonth() + 1;
     var year= date.getFullYear();
 
@@ -194,13 +196,13 @@ function fDate(){
     for (i=0;i<stocks.length; i++){
 
        var orgDate= stocks[i].date;         // stockObj Date field
-       var arrDate= orgDate.split('-');    
-       var mYear=arrDate.shift();           // remove Year from front   
+       var arrDate= orgDate.split('-');
+       var mYear=arrDate.shift();           // remove Year from front
        arrDate.push(mYear);                 // Place it at the end
-       var cDate=arrDate.join("/");        
+       var cDate=arrDate.join("/");
        stocks[i].date=cDate;                // Set Date back into field
     }
-    
+
     displayStock();
 }
 
@@ -214,12 +216,12 @@ function delStock(){
            +"</td>"
            );
 
-        
-         } 
+
+         }
        }
 
 function confirm(element){
-    
+
     element.innerHTML="Confirm";
     element.setAttribute('onClick','dele(this)');
    // $(element).fadeTo(100,0.2)
@@ -229,17 +231,17 @@ function confirm(element){
    // $(element).hide().slideDown(1000)
    // console.log($(element));
    // element.click(dele(element));
-    
+
 }
 
 // Delete Stock
    function dele(obj){
-    var id=obj.id;                                              //  Retrieves the Button's ID              
+    var id=obj.id;                                              //  Retrieves the Button's ID
     var i=id.replace(/\D/g,'');                                 // Strips Text from ID.
-    var row="#"+i;          
+    var row="#"+i;
     $(row)
-       .css('background-color', 'rgba(255, 0, 0, 0.15)')        //  R,G,B, transparancy
-       .fadeOut(1000);                                          //  Fades out stock on Table 
+       .css('background-color', 'rgba(255, 0, 0, .15)')         //  R,G,B, transparancy
+       .fadeOut(750);                                           //  Fades out stock on Table
     stocks.splice(i,1);                                         //  Deletes from array.
-}  
-     
+}
+
