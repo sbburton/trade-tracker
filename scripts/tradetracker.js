@@ -243,5 +243,29 @@ function confirm(element){
     stocks.splice(i,1);                                         //  Deletes from array.
 }  
      
+// Local Storage
 
-  
+//localStorage.setItem("username", stocks[0].broker);
+//localStorage.setItem("Stocks = ".stocks[0].symbol);
+ // alert ("username = "+ localStorage.getItem("username"));
+ //alert ("Symbol = "+ localStorage.getItem("symbol"));
+  for (i=0; i<stocks.length; i++){
+     localStorage.setItem('symbol', stocks[i].symbol);
+     localStorage.setItem('company', stocks[i].company);
+     localStorage.setItem('price', stocks[i].price);
+     localStorage.setItem('quantity', stocks[i].quantity);
+     localStorage.setItem('total', stocks[i].total);
+     localStorage.setItem('clientName', stocks[i].clientName);
+     localStorage.setItem('date', stocks[i].date);
+     localStorage.setItem('broker', stocks[i].broker);
+     localStorage.setItem('status', stocks[i].status);
+
+ }
+ 
+ for(var i in  localStorage)
+{
+   console.log(localStorage[i]);
+ }
+
+
+ 
