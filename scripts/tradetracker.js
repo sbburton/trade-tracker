@@ -243,8 +243,5 @@ function confirm(element){
     stocks.splice(i,1);                                         //  Deletes from array.
 }  
      
-// Local Storage
 
- // localStorage.setItem("username", stocks[0].broker);
-//  alert ("username = "+ localStorage.getItem("username"));
   
