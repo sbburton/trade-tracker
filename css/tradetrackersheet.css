@@ -212,10 +212,6 @@ select {
     height: 30%;
     margin: auto;
     display: block;
-<<<<<<< HEAD
-
-}
-=======
 }
 
 .sticky {
@@ -238,4 +234,3 @@ select {
     position: sticky;
     top: 400px;
 }
->>>>>>> sticky-input
