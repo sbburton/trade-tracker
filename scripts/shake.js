@@ -29,6 +29,7 @@ $(document).ready(function(){
 
         $(this).animate({ left: 0}, settings.interval, settings.complete);  
     }; 
+    
     $.fn.bounce = function(settings) {
         if(typeof settings.interval == 'undefined'){
             settings.interval = 100;
@@ -55,7 +56,8 @@ $(document).ready(function(){
         $(this).animate({ top: 0}, settings.interval, settings.complete);  
     };
     })(jQuery);
-           
+    
+    //add event listener to shake class
     $(document).ready(function(){
         $('button.shake').click(function(e){
                 if (shake == true){
@@ -68,13 +70,6 @@ $(document).ready(function(){
             
         });
        
-    $('button.bounce').click(function(e){
-            $(this).bounce({
-                interval: 100,
-                distance: 20,
-                times: 5
-            });
-        });
     });
     
 })
