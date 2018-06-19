@@ -3,9 +3,14 @@ const stockPropertyIdArray = ["symbol","company","price","quantity", "total","cl
 const tableColumns = ["Symbol","Company","Price","Quantity","Total","Client Name", "Date", "Broker", "Status", "Delete"]
 // added example inputs for stocks for testing purposes
 var stocks = [
-    {symbol: "FB", company: "FACEBOOK", price: "10.08", quantity: "2", total: "20.16", clientName: "JOHN", date: "06/02/2015", broker: "ARNELL", status: "PURCHASED"},
-    {symbol: "AMZN", company: "AMAZON", price: "40.02", quantity: "1", total: "40.02", clientName: "BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
-    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20.05", quantity: "6", total: "120.30", clientName: "JANE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"}
+    {symbol: "FB", company: "FACEBOOK", price: "10.08", quantity: "2", total: "20.16", clientName: "JOHN DOE", date: "06/02/2015", broker: "ARNELL", status: "PURCHASED"},
+    {symbol: "AMZN", company: "AMAZON", price: "40.02", quantity: "1", total: "40.02", clientName: "JEFF BEZOS", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "GE ", company: "GENERAL ELECTRIC", price: "20.05", quantity: "6", total: "120.30", clientName: "JANE LYNCH", date: "06/11/2018", broker: "ARNELL", status: "SOLD"},
+    {symbol: "ACAD", company: "ACADIA", price: "87.67", quantity: "10", total: "876.70", clientName: "JACK BOWER", date: "03/02/2009", broker: "ARNELL", status: "PURCHASED"},
+    {symbol: "AMGN", company: "AMGEN", price: "186.10", quantity: "5", total: "930.50", clientName: "CALVIN COOLIDGE", date: "04/04/2004", broker: "REESE", status: "WATCHED"},
+    {symbol: "JNPR ", company: "JUNIPER NETWORKS", price: "16.40", quantity: "50", total: "820.00", clientName: "JOHN ARBUCKLE", date: "06/11/2018", broker: "ARNELL", status: "SOLD"},
+    {symbol: "MA", company: "MASTERCARD", price: "33.60", quantity: "232", total: "7795.20", clientName: "MARY MAGDALINE", date: "01/2015", broker: "REESE", status: "SOLD"},
+    {symbol: "ORCL", company: "ORACLE", price: "131.02", quantity: "14", total: "1834.28", clientName: "CALVIN HOBBES", date: "11/04/1985", broker: "REESE", status: "WATCHED"}
     ];
 // var stockIndex = 3; // Obselete
 

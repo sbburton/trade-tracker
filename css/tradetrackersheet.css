@@ -159,7 +159,6 @@ input {
   border-radius: 25px;
 }
 
-<<<<<<< HEAD
 #addItem input {
     border-radius: 5px;
     margin-right: 5px;
@@ -181,7 +180,7 @@ select {
   padding-left: 10px;
   padding-right: 20px;
   background-color: white !important;
-
+ background: #003768 url('/blk-one-assets/cache-1528952368000/include/common/css/product-v3/i/mobile-chevron-down.png') 20px center no-repeat;
 
   /* Removes the default <select> styling */
   -webkit-appearance: none;
@@ -202,11 +201,32 @@ select {
   margin-bottom: 50px;
   border-radius: 5px;
   border: 1px solid #003768;
-=======
+}
+
 .logo {
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
     margin: auto;
     display: block;
->>>>>>> 4809f37ed8d6d1446e5719eeb1e4e4d21b5ac3ac
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/*.sticky-search {*/
+/*    position: -webkit-sticky;*/
+/*    position: sticky;*/
+/*    top: 400px;*/
+/*    background: white;*/
+/*    width: 70%;*/
+/*    display: block;*/
+/*}*/
+
+.sticky-button {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 400px;
 }
