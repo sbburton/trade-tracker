@@ -8,10 +8,22 @@ h1 {
   margin-bottom: 30px;
 }
 
+.logo {
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+}
+
+#search-stocks {
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+}
+
 #inputform {
  background: #003768 url('/blk-one-assets/cache-1528952368000/include/common/css/product-v3/i/mobile-chevron-down.png') 20px center no-repeat;
   padding: 30px;
   font-family: 'Montserrat', sans-serif;
+  padding-top: 0px;
 }
 
 .btn-primary {
