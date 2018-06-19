@@ -24,13 +24,13 @@ searchBar.addEventListener('keyup',function(e){
             if(str.indexOf(searchString) != -1)
             {
                 //console.log("Search index: " + str.indexOf(searchString));
-                console.log("Found it! " + str + " " + searchString);
+                //console.log("Found it! " + str + " " + searchString);
                 document.getElementById("stockTable").childNodes[i].hidden = false;
             }
             else
             {
                 //hide the row
-                console.log("Not a match: " + str + " " + searchString);
+                //console.log("Not a match: " + str + " " + searchString);
                 document.getElementById("stockTable").childNodes[i].hidden = true;
             }
         }

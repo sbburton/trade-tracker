@@ -1,3 +1,4 @@
+
 h1 {
   color: white;
   text-align: center;
@@ -119,7 +120,7 @@ select.form-control {
   border-bottom: 1px solid #000000;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 input[type="text"]:focus,
@@ -132,16 +133,63 @@ label {
   color: white;
 }
 
+.select-label {
+  padding-left: 10px;
+}
+
 input {
   overflow-x: none;
 }
 
 .submit-button {
-  padding: 10px;
+  padding: 5px;
   background: #003768 url('/blk-one-assets/cache-1528952368000/include/common/css/product-v3/i/mobile-chevron-down.png') 20px center no-repeat;
   border-radius: 25px;
 }
 
+#addItem input {
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+}
+
+#quantity,
+#symbol,
+#price,
+#date {
+    width: 60%;
+}
+
+select {
+  /* General styling */
+  height: 66%;
+  width: 200px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 20px;
+  background-color: white !important;
+
+
+  /* Removes the default <select> styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Positions background arrow image */
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: 175px center;
+}
+
+.selectpicker {
+  margin-left: 33px;
+}
+
+#search {
+  margin-bottom: 50px;
+  border-radius: 5px;
+  border: 1px solid #003768;
+}
 .logo {
     width: 40%;
     height: 40%;
