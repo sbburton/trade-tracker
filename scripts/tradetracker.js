@@ -262,10 +262,10 @@ function confirm(element){
 
  }
  
- for(var i in  localStorage)
-{
-   console.log(localStorage[i]);
- }
+// for(var i in  localStorage)
+//{
+   console.log(localStorage[3]);
+ //}
 
 
  
