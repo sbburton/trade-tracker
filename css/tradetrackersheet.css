@@ -147,6 +147,7 @@ input {
   border-radius: 25px;
 }
 
+<<<<<<< HEAD
 #addItem input {
     border-radius: 5px;
     margin-right: 5px;
@@ -189,4 +190,11 @@ select {
   margin-bottom: 50px;
   border-radius: 5px;
   border: 1px solid #003768;
+=======
+.logo {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    display: block;
+>>>>>>> 4809f37ed8d6d1446e5719eeb1e4e4d21b5ac3ac
 }
