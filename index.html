@@ -8,11 +8,12 @@
   <link rel="stylesheet" type="text/css" href="css/tradetrackersheet.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="scripts/jquery/jquery-3.3.1.js"></script>
+  <script src="scripts/shake.js"></script>
 
   <style>
   </style>
 
-  <title>Trade Tracker</title>
+    <title>Trade Tracker</title>
   </head>
   <body>
 
@@ -45,7 +46,7 @@
             </div>
             <div class="col-xs-2 ">
               <input type="date"  name="date" id="date"/>
-              <label for="symbol">Date</label>
+              <label for="symbol">Symbol</label>
             </div>
             <input hidden = "true" placeholder="Total" type="number" name="total" id="total" value = "0"/>
           </div>
@@ -55,27 +56,27 @@
 
             <!--broker selection dropdown-->
             <div class="col-xs-2">
-              <select class="selectpicker" data-live-search="true" name="broker" id="broker" default="Arnell">
+              <label for="broker">Broker</label>
+              <select  name="broker" id="broker" default="Arnell">
                 <option value="Reece" selected>Reece</option>
                 <option value="Arnell" selected>Arnell</option>
               </select>
-              <label for="broker" class="select-label">Broker</label>
             </div>
 
             <!--status selection dropdown-->
             <div class="col-xs-2">
-              <select class="selectpicker" name="status" id="status" default="Purchased">
+              <label for="symbol">Status</label>
+              <select  name="status" id="status" default="Purchased">
                 <option value="purchased" selected>Purchased</option>
                 <option value="watched">Watched</option>
                 <option value="sold">Sold</option>
               </select>
-              <label for="symbol" class="select-label">Status</label>
             </div>
           </div>
 
 
               <div class="col-xs-8 float-right submit-button">
-                <button type="submit" value="Submit" class="btn btn-primary" id="submit">Submit</button>
+                <button type="submit" value="Submit" class="btn btn-primary shake" id="submit">Submit</button>
               </div>
 
             </div>
@@ -91,10 +92,7 @@
 
     <div class="container">
       <form id="search-stocks">
-          <input id="search" type="text" placeholder="Search..." />
-          <label for="search" style="color: #003768; margin-left: 10px">
-            Search Entries
-          </label>
+          <input id = "search" type="text" placeholder="Search..." />
       </form>
     </div>
 
@@ -112,6 +110,7 @@
      <script src="scripts/validinput.js"></script>
      <script src="scripts/search.js"></script>
      <script src ="scripts/validatestocks.js"></script>
+     <script src="scripts/stocks.js"></script>
 
   </body>
 
