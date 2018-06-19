@@ -250,9 +250,15 @@ function confirm(element){
 
  var stockHist=[];
  for (i=0; i< stocks.length; i++){
-stockHist.push(stocks[i].symbol);
+ 
 
-//stockHist.push(stocks[i].company);
+var sym=stockHist.push(stocks[i].symbol);
+localStorage.getItem('symbol', stockHist);
+//var comp=stockHist.push(stocks[i].company);
+//var letter=stockHist;
+
+
+
 //stockHist.push(stocks[i].price);
 //stockHist.push(stocks[i].quantity);
 //stockHist.push(stocks[i].total);
