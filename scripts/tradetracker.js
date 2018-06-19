@@ -247,27 +247,7 @@ function confirm(element){
      
 // Local Storage
 
-//localStorage.setItem("username", stocks[0].broker);
-//localStorage.setItem("Stocks = ".stocks[0].symbol);
- // alert ("username = "+ localStorage.getItem("username"));
- //alert ("Symbol = "+ localStorage.getItem("symbol"));
-//  for (i=0; i<stocks.length; i++){
-//     localStorage.setItem('symbol', stocks[i].symbol);
-//     localStorage.setItem('company', stocks[i].company);
-//     localStorage.setItem('price', stocks[i].price);
-//     localStorage.setItem('quantity', stocks[i].quantity);
-//     localStorage.setItem('total', stocks[i].total);
-//     localStorage.setItem('clientName', stocks[i].clientName);
-//     localStorage.setItem('date', stocks[i].date);
-//     localStorage.setItem('broker', stocks[i].broker);
-//     localStorage.setItem('status', stocks[i].status);
 
-// }
- 
-// for(var i in  localStorage)
-//{
- //  console.log(localStorage[1]);
- //}
  var stockHist=[];
  for (i=0; i< stocks.length; i++){
 stockHist.push(stocks[i].symbol);
@@ -281,7 +261,7 @@ stockHist.push(stocks[i].symbol);
 //stockHist.push(stocks[i].broker);
 //stockHist.push(stocks[i].status);
 
-localStorage.setItem("symbol", JSON.stringify());
+localStorage.setItem("symbol", JSON.stringify(stockHist));
 //localStorage.setItem("company", JSON.stringify(stockHist));
 //localStorage.setItem("price", JSON.stringify(stockHist));
 //localStorage.setItem("quantity", JSON.stringify(stockHist));
