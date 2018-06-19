@@ -252,12 +252,21 @@ function confirm(element){
  for (i=0; i< stocks.length; i++){
  
 
-var sym=stockHist.push(stocks[i].symbol);
-localStorage.getItem('symbol', stockHist);
-//var comp=stockHist.push(stocks[i].company);
+// var sym=stockHist.push(stocks[i].symbol);
+localStorage.setItem("symbol", stocks[i].symbol);
+
+localStorage.setItem("company", stocks[i].company);
+
+
+
+var comp=stockHist.push(stocks[i].company);
 //var letter=stockHist;
 
+var sym=localStorage.getItem("symbol");
+var comp=localStorage.getItem("company");
+stockHist.push(sym);
 
+// var comp=localStorage.getItem("company");
 
 //stockHist.push(stocks[i].price);
 //stockHist.push(stocks[i].quantity);
@@ -267,7 +276,6 @@ localStorage.getItem('symbol', stockHist);
 //stockHist.push(stocks[i].broker);
 //stockHist.push(stocks[i].status);
 
-localStorage.setItem("symbol", JSON.stringify(stockHist));
 //localStorage.setItem("company", JSON.stringify(stockHist));
 //localStorage.setItem("price", JSON.stringify(stockHist));
 //localStorage.setItem("quantity", JSON.stringify(stockHist));
