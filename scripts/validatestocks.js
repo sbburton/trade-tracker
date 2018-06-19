@@ -1,12 +1,14 @@
-// create a new stock object
+//var myUrl = "https://api.iextrading.com/1.0/ref-data/symbols" ;
 
-var stocks = new Stocks('HUWV206VIKKM6UB0');
+var stockTicker = "FAILURE";
 
-var options = {
-  symbol: 'AAPL',
-  interval: 'weekly',
-  amount: 1
-};
+var myUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + stockTicker + "&interval=1min&apikey=HUWV206VIKKM6UB0"
 
-var result = await stocks.timeSeries(options);
+var results = $.getJSON(myUrl, callbackFuncWithData);
 
+
+function callbackFuncWithData(data)
+{
+    console.log(data);
+ // do some thing with data
+}
