@@ -269,10 +269,27 @@ function confirm(element){
  //  console.log(localStorage[1]);
  //}
  var stockHist=[];
- for (i in stocks){
+ for (i=0; i< stocks.length; i++){
 stockHist.push(stocks[i].symbol);
-console.log(stockHist);
-localStorage.setItem("symbol", JSON.stringify(stockHist));
+
+//stockHist.push(stocks[i].company);
+//stockHist.push(stocks[i].price);
+//stockHist.push(stocks[i].quantity);
+//stockHist.push(stocks[i].total);
+//stockHist.push(stocks[i].clientName);
+//stockHist.push(stocks[i].date);
+//stockHist.push(stocks[i].broker);
+//stockHist.push(stocks[i].status);
+
+localStorage.setItem("symbol", JSON.stringify());
+//localStorage.setItem("company", JSON.stringify(stockHist));
+//localStorage.setItem("price", JSON.stringify(stockHist));
+//localStorage.setItem("quantity", JSON.stringify(stockHist));
+//localStorage.setItem("total", JSON.stringify(stockHist));
+//localStorage.setItem("clientName", JSON.stringify(stockHist));
+//localStorage.setItem("date", JSON.stringify(stockHist));
+//localStorage.setItem("broker", JSON.stringify(stockHist));
+//localStorage.setItem("status", JSON.stringify(stockHist));
  }
 
 
