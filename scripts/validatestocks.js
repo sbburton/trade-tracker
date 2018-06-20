@@ -29,11 +29,9 @@
         console.log("hi");
         console.log(data);
 
-        if(data.hasOwnProperty("Error Message"))
+        if(data.hasOwnProperty("Error Message")){
         alert("Bad ticker!");
-        else
-        alert("Good ticker!");
-
+        }
      // do some thing with data
     }
 
