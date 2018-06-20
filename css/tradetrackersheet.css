@@ -176,6 +176,11 @@ input {
     width: 60%;
 }
 
+#broker,
+#status {
+    margin-left: 30px;
+}
+
 select {
   /* General styling */
   height: 66%;
